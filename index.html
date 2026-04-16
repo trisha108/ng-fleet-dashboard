@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>National Grid EV Fleet Transition Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --ng-blue: #003087;
+    --ng-teal: #00857c;
+    --ng-amber: #f5a623;
+    --ng-red: #d0021b;
+    --ng-green: #417505;
+    --bg: #f4f6f9;
+    --card: #ffffff;
+    --text: #1a1a2e;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 14px; }
+  
+  /* Header */
+  .header { background: var(--ng-blue); color: white; padding: 1.2rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .header-title { font-size: 1.1rem; font-weight: 600; }
+  .header-sub { font-size: 0.75rem; opacity: 0.8; margin-top: 2px; }
+  .header-badge { background: var(--ng-teal); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.72rem; font-weight: 600; }
+  
+  /* Tabs */
+  .tabs { display: flex; background: var(--ng-blue); border-top: 1px solid rgba(255,255,255,0.15); padding: 0 2rem; }
+  .tab { padding: 10px 18px; color: rgba(255,255,255,0.7); cursor: pointer; font-size: 0.82rem; border-bottom: 3px solid transparent; transition: all .2s; }
+  .tab:hover { color: white; }
+  .tab.active { color: white; border-bottom-color: var(--ng-teal); font-weight: 600; }
+  
+  /* Layout */
+  .content { padding: 1.5rem 2rem; display: none; }
+  .content.active { display: block; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 1.5rem; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 1.5rem; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 1.5rem; }
+  
+  /* Cards */
+  .card { background: var(--card); border-radius: 10px; padding: 1.2rem; border: 1px solid var(--border); }
+  .metric-card { background: var(--card); border-radius: 10px; padding: 1rem 1.2rem; border: 1px solid var(--border); }
+  .metric-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 4px; }
+  .metric-value { font-size: 1.8rem; font-weight: 700; color: var(--ng-blue); line-height: 1; }
+  .metric-sub { font-size: 0.72rem; color: var(--muted); margin-top: 4px; }
+  .metric-good { color: var(--ng-green); }
+  .metric-warn { color: var(--ng-amber); }
+  .metric-bad { color: var(--ng-red); }
+  
+  /* Chart containers */
+  .chart-wrap { position: relative; height: 280px; }
+  .chart-wrap-sm { position: relative; height: 220px; }
+  .card-title { font-size: 0.82rem; font-weight: 600; color: var(--text); margin-bottom: 1rem; }
+  .card-sub { font-size: 0.72rem; color: var(--muted); margin-top: 2px; font-weight: 400; }
+  
+  /* Table */
+  table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+  th { background: var(--bg); padding: 8px 10px; text-align: left; font-weight: 600; color: var(--muted); font-size: 0.7rem; text-transform: uppercase; border-bottom: 2px solid var(--border); }
+  td { padding: 7px 10px; border-bottom: 1px solid var(--border); color: var(--text); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f9fafb; }
+  
+  /* Badges */
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.68rem; font-weight: 600; }
+  .badge-green { background: #dcfce7; color: #166534; }
+  .badge-amber { background: #fef9c3; color: #854d0e; }
+  .badge-red { background: #fee2e2; color: #991b1b; }
+  .badge-blue { background: #dbeafe; color: #1e40af; }
+  .badge-gray { background: #f3f4f6; color: #374151; }
+  
+  /* Progress bar */
+  .progress-wrap { background: #e5e7eb; border-radius: 6px; height: 10px; overflow: hidden; margin-top: 6px; }
+  .progress-fill { height: 100%; border-radius: 6px; transition: width .5s; }
+  
+  /* Alert box */
+  .alert { border-left: 4px solid var(--ng-amber); background: #fffbeb; padding: 10px 14px; border-radius: 0 6px 6px 0; margin-bottom: 1rem; font-size: 0.8rem; }
+  .alert-title { font-weight: 600; margin-bottom: 2px; }
+  
+  /* Section label */
+  .section-label { font-size: 0.7rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 10px; }
+
+  @media (max-width: 900px) {
+    .grid-4 { grid-template-columns: repeat(2,1fr); }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="header-title">National Grid US — EV Fleet Transition Readiness Dashboard</div>
+    <div class="header-sub">Associate Analyst, Systems & Reporting | Graduate Development Program Project | Trisha</div>
+  </div>
+  <div class="header-badge">Target: 100% EV by 2030</div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('overview')">Overview</div>
+  <div class="tab" onclick="showTab('fleet')">Fleet Analysis</div>
+  <div class="tab" onclick="showTab('charging')">Charging Infrastructure</div>
+  <div class="tab" onclick="showTab('kpi')">Charging KPIs</div>
+  <div class="tab" onclick="showTab('priority')">EV Swap Priority</div>
+</div>
+
+<!-- TAB 1: OVERVIEW -->
+<div id="tab-overview" class="content active">
+  <div class="grid-4">
+    <div class="metric-card">
+      <div class="metric-label">Current EV rate</div>
+      <div class="metric-value metric-warn">3.0%</div>
+      <div class="progress-wrap"><div class="progress-fill" style="width:3.0%;background:var(--ng-amber)"></div></div>
+      <div class="metric-sub">15 of 500 vehicles electric</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">2025/26 target</div>
+      <div class="metric-value metric-bad">60%</div>
+      <div class="progress-wrap"><div class="progress-fill" style="width:60%;background:var(--ng-red)"></div></div>
+      <div class="metric-sub">Gap: 57.0pp — 285 more EVs needed</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">High-priority swap candidates</div>
+      <div class="metric-value" style="color:var(--ng-teal)">31</div>
+      <div class="metric-sub">Vehicles eligible for EV replacement now</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Annual fleet CO₂ (ICE vehicles)</div>
+      <div class="metric-value metric-bad">3,321t</div>
+      <div class="metric-sub">Fuel cost: $983,802/yr</div>
+    </div>
+  </div>
+
+  <div class="alert">
+    <div class="alert-title">Fleet electrification is significantly behind the 60% target for 2025/26</div>
+    National Grid's US fleet currently sits at 3.0% EV — 285 additional vehicles need to be swapped to hit the stated 60% interim target. 
+    31 vehicles are identified as high-priority candidates based on age and mileage. Immediate action on these would close approximately 11% of the gap.
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Electrification progress vs. targets (2024–2030) <span class="card-sub">— 3 scenarios</span></div>
+      <div class="chart-wrap"><canvas id="projChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Fleet composition by region</div>
+      <div class="chart-wrap"><canvas id="regionChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-title">Off-peak charging rate <span class="card-sub">— fleet-wide</span></div>
+      <div style="text-align:center;padding:1rem 0">
+        <div style="font-size:3rem;font-weight:700;color:#f5a623">71.5%</div>
+        <div style="font-size:0.8rem;color:var(--muted);margin-top:4px">Target: 80%+</div>
+        <div class="progress-wrap" style="margin-top:12px"><div class="progress-fill" style="width:71.5%;background:#f5a623"></div></div>
+        <div style="font-size:0.75rem;color:var(--muted);margin-top:8px">Potential savings if 100% off-peak: <strong>$555</strong> over 8 weeks</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Annual emissions at stake</div>
+      <div style="text-align:center;padding:.5rem 0">
+        <div style="font-size:2rem;font-weight:700;color:var(--ng-red)">3,321</div>
+        <div style="font-size:0.8rem;color:var(--muted)">tonnes CO₂/year (current ICE fleet)</div>
+        <div style="margin-top:1rem;font-size:0.82rem;color:var(--muted)">Eliminated if fleet goes 100% EV on a clean grid</div>
+        <div style="font-size:1.3rem;font-weight:700;color:var(--ng-green);margin-top:8px">0t</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Charging infrastructure gaps</div>
+      <div id="gap-summary" style="margin-top:.5rem"></div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 2: FLEET ANALYSIS -->
+<div id="tab-fleet" class="content">
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">EV vs ICE by vehicle type</div>
+      <div class="chart-wrap"><canvas id="typeChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Fleet age distribution</div>
+      <div class="chart-wrap"><canvas id="ageChart"></canvas></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Depot-level fleet summary</div>
+    <table id="depotTable">
+      <thead><tr>
+        <th>Depot</th><th>Region</th><th>Total</th><th>EVs</th><th>EV %</th>
+        <th>High Priority Swaps</th><th>Avg Age (yrs)</th><th>Charging Gap</th><th>Investment Priority</th>
+      </tr></thead>
+      <tbody id="depotTbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TAB 3: CHARGING INFRASTRUCTURE -->
+<div id="tab-charging" class="content">
+  <div class="grid-4">
+    <div class="metric-card">
+      <div class="metric-label">Total stations mapped</div>
+      <div class="metric-value" style="color:var(--ng-blue)">207</div>
+      <div class="metric-sub">Across 8 depot areas</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Total charging ports</div>
+      <div class="metric-value" style="color:var(--ng-teal)">1054</div>
+      <div class="metric-sub">Public + workplace combined</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Workplace ports</div>
+      <div class="metric-value metric-warn">211</div>
+      <div class="metric-sub">Available for fleet use</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">DC fast chargers</div>
+      <div class="metric-value" style="color:var(--ng-blue)">68</div>
+      <div class="metric-sub">High-capacity stations</div>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Charging gap by depot — EVs vs available workplace ports</div>
+      <div class="chart-wrap"><canvas id="gapChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Investment priority by depot</div>
+      <div class="chart-wrap-sm" style="overflow-y:auto;height:auto">
+        <table id="gapTable">
+          <thead><tr><th>Depot</th><th>Current EVs</th><th>Swap Candidates</th><th>Workplace Ports</th><th>Gap</th><th>Severity</th><th>Action</th></tr></thead>
+          <tbody id="gapTbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 4: CHARGING KPIs -->
+<div id="tab-kpi" class="content">
+  <div class="grid-4">
+    <div class="metric-card">
+      <div class="metric-label">Fleet off-peak rate (8-week avg)</div>
+      <div class="metric-value metric-warn">71.5%</div>
+      <div class="metric-sub">Target: 80%+</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Total charging cost (8 wks)</div>
+      <div class="metric-value" style="color:var(--ng-blue)">$2,099</div>
+      <div class="metric-sub">Actual cost paid</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Optimal cost (100% off-peak)</div>
+      <div class="metric-value metric-good">$1,544</div>
+      <div class="metric-sub">If all sessions off-peak</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Savings opportunity</div>
+      <div class="metric-value metric-bad">$555</div>
+      <div class="metric-sub">Lost over 8 weeks from peak charging</div>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Weekly off-peak rate trend <span class="card-sub">— target line at 80%</span></div>
+      <div class="chart-wrap"><canvas id="weeklyChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Off-peak compliance by depot</div>
+      <div class="chart-wrap"><canvas id="depotKpiChart"></canvas></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Weekly cost: actual vs optimal</div>
+    <div class="chart-wrap"><canvas id="costChart"></canvas></div>
+  </div>
+</div>
+
+<!-- TAB 5: EV SWAP PRIORITY -->
+<div id="tab-priority" class="content">
+  <div class="alert">
+    <div class="alert-title">How EV swap priority is calculated</div>
+    Each ICE vehicle that is EV-capable (light-duty vans, pickups, SUVs) receives a priority score based on: 
+    percentage of useful life consumed (60% weight) + estimated annual fuel cost saved by switching (40% weight). 
+    High-priority vehicles should be targeted first in the next procurement cycle.
+  </div>
+  <div class="card">
+    <div class="card-title">Top 15 high-priority EV swap candidates</div>
+    <table>
+      <thead><tr>
+        <th>Vehicle ID</th><th>Depot</th><th>Type</th><th>Age (yrs)</th>
+        <th>Mileage</th><th>Life Used %</th><th>Maint. Risk</th><th>Annual Fuel Cost</th><th>Annual CO₂</th>
+      </tr></thead>
+      <tbody id="hiPriTbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+const D = {
+  "years": [
+    2024,
+    2025,
+    2026,
+    2027,
+    2028,
+    2029,
+    2030
+  ],
+  "proj_agg": [
+    15,
+    170,
+    255,
+    340,
+    425,
+    500,
+    500
+  ],
+  "proj_mod": [
+    15,
+    120,
+    180,
+    240,
+    300,
+    360,
+    420
+  ],
+  "proj_slow": [
+    15,
+    70,
+    105,
+    140,
+    175,
+    210,
+    245
+  ],
+  "target_60": [
+    300,
+    300,
+    300,
+    300,
+    300,
+    300,
+    300
+  ],
+  "target_100": [
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500
+  ],
+  "total_vehicles": 500,
+  "regions": [
+    {
+      "region": "Downstate NY",
+      "total": 220,
+      "evs": 5,
+      "high_priority": 12,
+      "annual_co2": 1455366,
+      "annual_cost": 431439,
+      "ev_pct": 2.3,
+      "annual_co2_t": 1455.0
+    },
+    {
+      "region": "Massachusetts",
+      "total": 90,
+      "evs": 2,
+      "high_priority": 9,
+      "annual_co2": 618631,
+      "annual_cost": 183610,
+      "ev_pct": 2.2,
+      "annual_co2_t": 619.0
+    },
+    {
+      "region": "Upstate NY",
+      "total": 190,
+      "evs": 8,
+      "high_priority": 10,
+      "annual_co2": 1246575,
+      "annual_cost": 368753,
+      "ev_pct": 4.2,
+      "annual_co2_t": 1247.0
+    }
+  ],
+  "depots": [
+    {
+      "depot": "Albany, NY",
+      "total": 65,
+      "evs": 1,
+      "high_priority": 2,
+      "avg_age": 4.661538461538462,
+      "avg_risk": 0.4060153846153846,
+      "ev_pct": 1.5,
+      "investment_priority": "Monitor",
+      "gap_severity": "Low",
+      "charging_gap_score": 0
+    },
+    {
+      "depot": "Brooklyn, NY",
+      "total": 90,
+      "evs": 2,
+      "high_priority": 5,
+      "avg_age": 4.844444444444444,
+      "avg_risk": 0.4051444444444445,
+      "ev_pct": 2.2,
+      "investment_priority": "Monitor",
+      "gap_severity": "Low",
+      "charging_gap_score": 0
+    },
+    {
+      "depot": "Hicksville, NY",
+      "total": 75,
+      "evs": 0,
+      "high_priority": 4,
+      "avg_age": 5.24,
+      "avg_risk": 0.43421333333333334,
+      "ev_pct": 0.0,
+      "investment_priority": "Monitor",
+      "gap_severity": "Low",
+      "charging_gap_score": 0
+    },
+    {
+      "depot": "Melville, NY",
+      "total": 55,
+      "evs": 3,
+      "high_priority": 3,
+      "avg_age": 4.181818181818182,
+      "avg_risk": 0.37114545454545456,
+      "ev_pct": 5.5,
+      "investment_priority": "Monitor",
+      "gap_severity": "Low",
+      "charging_gap_score": 0
+    },
+    {
+      "depot": "Syracuse, NY",
+      "total": 80,
+      "evs": 4,
+      "high_priority": 4,
+      "avg_age": 5.225,
+      "avg_risk": 0.42188749999999997,
+      "ev_pct": 5.0,
+      "investment_priority": "Monitor",
+      "gap_severity": "Low",
+      "charging_gap_score": 0
+    },
+    {
+      "depot": "Utica, NY",
+      "total": 45,
+      "evs": 3,
+      "high_priority": 4,
+      "avg_age": 4.6,
+      "avg_risk": 0.40444444444444444,
+      "ev_pct": 6.7,
+      "investment_priority": "Monitor",
+      "gap_severity": "Low",
+      "charging_gap_score": 0
+    },
+    {
+      "depot": "Waltham, MA",
+      "total": 40,
+      "evs": 1,
+      "high_priority": 5,
+      "avg_age": 4.075,
+      "avg_risk": 0.373875,
+      "ev_pct": 2.5,
+      "investment_priority": "Monitor",
+      "gap_severity": "Low",
+      "charging_gap_score": 0
+    },
+    {
+      "depot": "Worcester, MA",
+      "total": 50,
+      "evs": 1,
+      "high_priority": 4,
+      "avg_age": 4.94,
+      "avg_risk": 0.43201999999999996,
+      "ev_pct": 2.0,
+      "investment_priority": "Monitor",
+      "gap_severity": "Low",
+      "charging_gap_score": 0
+    }
+  ],
+  "weekly": [
+    {
+      "week": 1,
+      "sessions": 75,
+      "off_peak": 57,
+      "cost": 254.44,
+      "energy": 2406.1,
+      "off_peak_pct": 76.0,
+      "optimal_cost": 192.49,
+      "savings": 61.95
+    },
+    {
+      "week": 2,
+      "sessions": 75,
+      "off_peak": 47,
+      "cost": 275.6,
+      "energy": 2378.2,
+      "off_peak_pct": 62.7,
+      "optimal_cost": 190.26,
+      "savings": 85.34
+    },
+    {
+      "week": 3,
+      "sessions": 75,
+      "off_peak": 56,
+      "cost": 261.5,
+      "energy": 2488.0,
+      "off_peak_pct": 74.7,
+      "optimal_cost": 199.04,
+      "savings": 62.46
+    },
+    {
+      "week": 4,
+      "sessions": 75,
+      "off_peak": 53,
+      "cost": 272.33,
+      "energy": 2441.8,
+      "off_peak_pct": 70.7,
+      "optimal_cost": 195.34,
+      "savings": 76.99
+    },
+    {
+      "week": 5,
+      "sessions": 75,
+      "off_peak": 55,
+      "cost": 251.8,
+      "energy": 2388.2,
+      "off_peak_pct": 73.3,
+      "optimal_cost": 191.06,
+      "savings": 60.74
+    },
+    {
+      "week": 6,
+      "sessions": 75,
+      "off_peak": 57,
+      "cost": 248.57,
+      "energy": 2384.2,
+      "off_peak_pct": 76.0,
+      "optimal_cost": 190.74,
+      "savings": 57.83
+    },
+    {
+      "week": 7,
+      "sessions": 75,
+      "off_peak": 54,
+      "cost": 261.98,
+      "energy": 2429.9,
+      "off_peak_pct": 72.0,
+      "optimal_cost": 194.39,
+      "savings": 67.59
+    },
+    {
+      "week": 8,
+      "sessions": 75,
+      "off_peak": 50,
+      "cost": 272.83,
+      "energy": 2388.1,
+      "off_peak_pct": 66.7,
+      "optimal_cost": 191.05,
+      "savings": 81.78
+    }
+  ],
+  "depot_charging": [
+    {
+      "depot": "Brooklyn, NY",
+      "sessions": 80,
+      "off_peak": 42,
+      "cost": 346.72,
+      "energy": 2752.6,
+      "off_peak_pct": 52.5,
+      "optimal_cost": 220.21,
+      "savings_opp": 126.51
+    },
+    {
+      "depot": "Albany, NY",
+      "sessions": 40,
+      "off_peak": 25,
+      "cost": 148.37,
+      "energy": 1225.6,
+      "off_peak_pct": 62.5,
+      "optimal_cost": 98.05,
+      "savings_opp": 50.32
+    },
+    {
+      "depot": "Waltham, MA",
+      "sessions": 40,
+      "off_peak": 28,
+      "cost": 145.81,
+      "energy": 1305.1,
+      "off_peak_pct": 70.0,
+      "optimal_cost": 104.41,
+      "savings_opp": 41.4
+    },
+    {
+      "depot": "Melville, NY",
+      "sessions": 120,
+      "off_peak": 86,
+      "cost": 416.8,
+      "energy": 3869.9,
+      "off_peak_pct": 71.7,
+      "optimal_cost": 309.59,
+      "savings_opp": 107.21
+    },
+    {
+      "depot": "Worcester, MA",
+      "sessions": 40,
+      "off_peak": 29,
+      "cost": 138.32,
+      "energy": 1337.6,
+      "off_peak_pct": 72.5,
+      "optimal_cost": 107.01,
+      "savings_opp": 31.31
+    },
+    {
+      "depot": "Syracuse, NY",
+      "sessions": 160,
+      "off_peak": 124,
+      "cost": 505.52,
+      "energy": 4918.6,
+      "off_peak_pct": 77.5,
+      "optimal_cost": 393.49,
+      "savings_opp": 112.03
+    },
+    {
+      "depot": "Utica, NY",
+      "sessions": 120,
+      "off_peak": 95,
+      "cost": 397.51,
+      "energy": 3895.1,
+      "off_peak_pct": 79.2,
+      "optimal_cost": 311.61,
+      "savings_opp": 85.9
+    }
+  ],
+  "gap": [
+    {
+      "depot": "Syracuse, NY",
+      "region": "Upstate NY",
+      "depot_lat": 43.0481,
+      "depot_lng": -76.1474,
+      "current_evs": 4,
+      "high_priority_swap_candidates": 4,
+      "total_nearby_stations": 15,
+      "total_nearby_ports": 71,
+      "workplace_ports": 15,
+      "charging_gap_score": 0,
+      "gap_severity": "Low",
+      "investment_priority": "Monitor"
+    },
+    {
+      "depot": "Albany, NY",
+      "region": "Upstate NY",
+      "depot_lat": 42.6526,
+      "depot_lng": -73.7562,
+      "current_evs": 1,
+      "high_priority_swap_candidates": 2,
+      "total_nearby_stations": 23,
+      "total_nearby_ports": 124,
+      "workplace_ports": 22,
+      "charging_gap_score": 0,
+      "gap_severity": "Low",
+      "investment_priority": "Monitor"
+    },
+    {
+      "depot": "Utica, NY",
+      "region": "Upstate NY",
+      "depot_lat": 43.1009,
+      "depot_lng": -75.2327,
+      "current_evs": 3,
+      "high_priority_swap_candidates": 4,
+      "total_nearby_stations": 7,
+      "total_nearby_ports": 40,
+      "workplace_ports": 8,
+      "charging_gap_score": 0,
+      "gap_severity": "Low",
+      "investment_priority": "Monitor"
+    },
+    {
+      "depot": "Brooklyn, NY",
+      "region": "Downstate NY",
+      "depot_lat": 40.6782,
+      "depot_lng": -73.9442,
+      "current_evs": 2,
+      "high_priority_swap_candidates": 5,
+      "total_nearby_stations": 57,
+      "total_nearby_ports": 288,
+      "workplace_ports": 54,
+      "charging_gap_score": 0,
+      "gap_severity": "Low",
+      "investment_priority": "Monitor"
+    },
+    {
+      "depot": "Hicksville, NY",
+      "region": "Downstate NY",
+      "depot_lat": 40.7682,
+      "depot_lng": -73.5254,
+      "current_evs": 0,
+      "high_priority_swap_candidates": 4,
+      "total_nearby_stations": 28,
+      "total_nearby_ports": 140,
+      "workplace_ports": 34,
+      "charging_gap_score": 0,
+      "gap_severity": "Low",
+      "investment_priority": "Monitor"
+    },
+    {
+      "depot": "Melville, NY",
+      "region": "Downstate NY",
+      "depot_lat": 40.7896,
+      "depot_lng": -73.4079,
+      "current_evs": 3,
+      "high_priority_swap_candidates": 3,
+      "total_nearby_stations": 23,
+      "total_nearby_ports": 127,
+      "workplace_ports": 19,
+      "charging_gap_score": 0,
+      "gap_severity": "Low",
+      "investment_priority": "Monitor"
+    },
+    {
+      "depot": "Worcester, MA",
+      "region": "Massachusetts",
+      "depot_lat": 42.2626,
+      "depot_lng": -71.8023,
+      "current_evs": 1,
+      "high_priority_swap_candidates": 4,
+      "total_nearby_stations": 18,
+      "total_nearby_ports": 88,
+      "workplace_ports": 25,
+      "charging_gap_score": 0,
+      "gap_severity": "Low",
+      "investment_priority": "Monitor"
+    },
+    {
+      "depot": "Waltham, MA",
+      "region": "Massachusetts",
+      "depot_lat": 42.3765,
+      "depot_lng": -71.2356,
+      "current_evs": 1,
+      "high_priority_swap_candidates": 5,
+      "total_nearby_stations": 36,
+      "total_nearby_ports": 176,
+      "workplace_ports": 34,
+      "charging_gap_score": 0,
+      "gap_severity": "Low",
+      "investment_priority": "Monitor"
+    }
+  ],
+  "hi_pri": [
+    {
+      "vehicle_id": "NG-US-0440",
+      "depot": "Worcester, MA",
+      "vehicle_type": "Light-duty van",
+      "age_years": 10,
+      "mileage": 213996,
+      "pct_life_used": 100.0,
+      "maintenance_risk_score": 0.825,
+      "annual_fuel_cost_est": 2371,
+      "annual_emissions_kg_co2": 7178
+    },
+    {
+      "vehicle_id": "NG-US-0497",
+      "depot": "Waltham, MA",
+      "vehicle_type": "SUV/response vehicle",
+      "age_years": 8,
+      "mileage": 164365,
+      "pct_life_used": 100.0,
+      "maintenance_risk_score": 0.778,
+      "annual_fuel_cost_est": 3211,
+      "annual_emissions_kg_co2": 10846
+    },
+    {
+      "vehicle_id": "NG-US-0461",
+      "depot": "Waltham, MA",
+      "vehicle_type": "Light-duty van",
+      "age_years": 10,
+      "mileage": 190123,
+      "pct_life_used": 100.0,
+      "maintenance_risk_score": 0.852,
+      "annual_fuel_cost_est": 2330,
+      "annual_emissions_kg_co2": 6979
+    },
+    {
+      "vehicle_id": "NG-US-0296",
+      "depot": "Hicksville, NY",
+      "vehicle_type": "Light-duty van",
+      "age_years": 9,
+      "mileage": 160023,
+      "pct_life_used": 90.0,
+      "maintenance_risk_score": 0.9,
+      "annual_fuel_cost_est": 2123,
+      "annual_emissions_kg_co2": 7363
+    },
+    {
+      "vehicle_id": "NG-US-0202",
+      "depot": "Brooklyn, NY",
+      "vehicle_type": "Light-duty van",
+      "age_years": 9,
+      "mileage": 133986,
+      "pct_life_used": 90.0,
+      "maintenance_risk_score": 0.775,
+      "annual_fuel_cost_est": 2183,
+      "annual_emissions_kg_co2": 7113
+    },
+    {
+      "vehicle_id": "NG-US-0335",
+      "depot": "Hicksville, NY",
+      "vehicle_type": "Pickup truck",
+      "age_years": 9,
+      "mileage": 167593,
+      "pct_life_used": 90.0,
+      "maintenance_risk_score": 0.707,
+      "annual_fuel_cost_est": 2616,
+      "annual_emissions_kg_co2": 8367
+    },
+    {
+      "vehicle_id": "NG-US-0429",
+      "depot": "Worcester, MA",
+      "vehicle_type": "Pickup truck",
+      "age_years": 9,
+      "mileage": 164277,
+      "pct_life_used": 90.0,
+      "maintenance_risk_score": 0.749,
+      "annual_fuel_cost_est": 2665,
+      "annual_emissions_kg_co2": 9596
+    },
+    {
+      "vehicle_id": "NG-US-0034",
+      "depot": "Syracuse, NY",
+      "vehicle_type": "SUV/response vehicle",
+      "age_years": 7,
+      "mileage": 154298,
+      "pct_life_used": 87.5,
+      "maintenance_risk_score": 0.717,
+      "annual_fuel_cost_est": 3103,
+      "annual_emissions_kg_co2": 9696
+    },
+    {
+      "vehicle_id": "NG-US-0312",
+      "depot": "Hicksville, NY",
+      "vehicle_type": "Pickup truck",
+      "age_years": 8,
+      "mileage": 164154,
+      "pct_life_used": 80.0,
+      "maintenance_risk_score": 0.652,
+      "annual_fuel_cost_est": 2758,
+      "annual_emissions_kg_co2": 8889
+    },
+    {
+      "vehicle_id": "NG-US-0492",
+      "depot": "Waltham, MA",
+      "vehicle_type": "Light-duty van",
+      "age_years": 8,
+      "mileage": 124381,
+      "pct_life_used": 80.0,
+      "maintenance_risk_score": 0.725,
+      "annual_fuel_cost_est": 2237,
+      "annual_emissions_kg_co2": 6808
+    },
+    {
+      "vehicle_id": "NG-US-0161",
+      "depot": "Utica, NY",
+      "vehicle_type": "Light-duty van",
+      "age_years": 8,
+      "mileage": 162977,
+      "pct_life_used": 80.0,
+      "maintenance_risk_score": 0.708,
+      "annual_fuel_cost_est": 2077,
+      "annual_emissions_kg_co2": 7039
+    },
+    {
+      "vehicle_id": "NG-US-0229",
+      "depot": "Brooklyn, NY",
+      "vehicle_type": "Light-duty van",
+      "age_years": 8,
+      "mileage": 124082,
+      "pct_life_used": 80.0,
+      "maintenance_risk_score": 0.751,
+      "annual_fuel_cost_est": 2308,
+      "annual_emissions_kg_co2": 7365
+    },
+    {
+      "vehicle_id": "NG-US-0242",
+      "depot": "Brooklyn, NY",
+      "vehicle_type": "Pickup truck",
+      "age_years": 8,
+      "mileage": 193950,
+      "pct_life_used": 80.0,
+      "maintenance_risk_score": 0.766,
+      "annual_fuel_cost_est": 2400,
+      "annual_emissions_kg_co2": 8243
+    },
+    {
+      "vehicle_id": "NG-US-0254",
+      "depot": "Brooklyn, NY",
+      "vehicle_type": "Pickup truck",
+      "age_years": 8,
+      "mileage": 196797,
+      "pct_life_used": 80.0,
+      "maintenance_risk_score": 0.693,
+      "annual_fuel_cost_est": 2576,
+      "annual_emissions_kg_co2": 9742
+    },
+    {
+      "vehicle_id": "NG-US-0293",
+      "depot": "Hicksville, NY",
+      "vehicle_type": "SUV/response vehicle",
+      "age_years": 6,
+      "mileage": 139978,
+      "pct_life_used": 75.0,
+      "maintenance_risk_score": 0.588,
+      "annual_fuel_cost_est": 3277,
+      "annual_emissions_kg_co2": 9327
+    }
+  ],
+  "type_summary": [
+    {
+      "vehicle_type": "Bucket truck",
+      "fuel_type": "ICE (Diesel/Gas)",
+      "count": 89
+    },
+    {
+      "vehicle_type": "Digger derrick",
+      "fuel_type": "ICE (Diesel/Gas)",
+      "count": 64
+    },
+    {
+      "vehicle_type": "Light-duty van",
+      "fuel_type": "Electric",
+      "count": 10
+    },
+    {
+      "vehicle_type": "Light-duty van",
+      "fuel_type": "ICE (Diesel/Gas)",
+      "count": 109
+    },
+    {
+      "vehicle_type": "Pickup truck",
+      "fuel_type": "Electric",
+      "count": 1
+    },
+    {
+      "vehicle_type": "Pickup truck",
+      "fuel_type": "ICE (Diesel/Gas)",
+      "count": 95
+    },
+    {
+      "vehicle_type": "SUV/response vehicle",
+      "fuel_type": "Electric",
+      "count": 4
+    },
+    {
+      "vehicle_type": "SUV/response vehicle",
+      "fuel_type": "ICE (Diesel/Gas)",
+      "count": 63
+    },
+    {
+      "vehicle_type": "Service truck",
+      "fuel_type": "ICE (Diesel/Gas)",
+      "count": 65
+    }
+  ]
+};
+
+function showTab(name) {
+  document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+  if (!window.chartsBuilt) buildCharts();
+}
+
+// ---- COLORS ----
+const BLUE = '#003087', TEAL = '#00857c', AMBER = '#f5a623', RED = '#d0021b', GREEN = '#417505';
+const REGION_COLORS = {'Upstate NY': BLUE, 'Downstate NY': TEAL, 'Massachusetts': AMBER};
+
+function buildCharts() {
+  window.chartsBuilt = true;
+
+  // Projection chart
+  new Chart(document.getElementById('projChart'), {
+    type: 'line',
+    data: {
+      labels: D.years,
+      datasets: [
+        {label:'Aggressive scenario', data: D.proj_agg, borderColor: GREEN, backgroundColor:'rgba(65,117,5,0.08)', fill:true, tension:.3},
+        {label:'Moderate scenario', data: D.proj_mod, borderColor: TEAL, backgroundColor:'rgba(0,133,124,0.08)', fill:true, tension:.3},
+        {label:'Slow scenario', data: D.proj_slow, borderColor: AMBER, backgroundColor:'rgba(245,166,35,0.08)', fill:true, tension:.3},
+        {label:'60% target (2026)', data: D.target_60, borderColor: RED, borderDash:[6,3], pointRadius:0},
+        {label:'100% target (2030)', data: D.target_100, borderColor:'#7c3aed', borderDash:[6,3], pointRadius:0},
+      ]
+    },
+    options: {responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom',labels:{font:{size:10}}}},
+      scales:{y:{title:{display:true,text:'EV Vehicles'},min:0,max:D.total_vehicles},
+               x:{grid:{display:false}}}
+    }
+  });
+
+  // Region chart
+  const regions = D.regions.map(r => r.region);
+  new Chart(document.getElementById('regionChart'), {
+    type: 'bar',
+    data: {
+      labels: regions,
+      datasets: [
+        {label:'ICE Vehicles', data: D.regions.map(r=>r.total-r.evs), backgroundColor: '#dbeafe'},
+        {label:'Electric Vehicles', data: D.regions.map(r=>r.evs), backgroundColor: TEAL},
+      ]
+    },
+    options: {responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom',labels:{font:{size:10}}}},
+      scales:{x:{stacked:true,grid:{display:false}},y:{stacked:true,title:{display:true,text:'Vehicles'}}}
+    }
+  });
+
+  // Gap chart
+  new Chart(document.getElementById('gapChart'), {
+    type: 'bar',
+    data: {
+      labels: D.gap.map(g=>g.depot.replace(', NY','').replace(', MA','')),
+      datasets: [
+        {label:'Current EVs at depot', data: D.gap.map(g=>g.current_evs), backgroundColor: TEAL},
+        {label:'High-priority swap candidates', data: D.gap.map(g=>g.high_priority_swap_candidates), backgroundColor: AMBER},
+        {label:'Workplace charging ports', data: D.gap.map(g=>g.workplace_ports), backgroundColor: BLUE},
+      ]
+    },
+    options: {responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom',labels:{font:{size:10}}}},
+      scales:{x:{grid:{display:false}},y:{title:{display:true,text:'Count'}}}
+    }
+  });
+
+  // Weekly off-peak trend
+  new Chart(document.getElementById('weeklyChart'), {
+    type: 'line',
+    data: {
+      labels: D.weekly.map(w=>'Week '+w.week),
+      datasets: [
+        {label:'Off-peak rate %', data: D.weekly.map(w=>w.off_peak_pct), borderColor: TEAL, backgroundColor:'rgba(0,133,124,0.08)', fill:true, tension:.3},
+        {label:'Target (80%)', data: D.weekly.map(()=>80), borderColor: GREEN, borderDash:[6,3], pointRadius:0},
+      ]
+    },
+    options: {responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom',labels:{font:{size:10}}}},
+      scales:{y:{min:50,max:100,title:{display:true,text:'% Off-peak'}},x:{grid:{display:false}}}
+    }
+  });
+
+  // Depot KPI chart
+  new Chart(document.getElementById('depotKpiChart'), {
+    type: 'bar',
+    data: {
+      labels: D.depot_charging.map(d=>d.depot.replace(', NY','').replace(', MA','')),
+      datasets: [{
+        label:'Off-peak rate %',
+        data: D.depot_charging.map(d=>d.off_peak_pct),
+        backgroundColor: D.depot_charging.map(d => d.off_peak_pct >= 80 ? GREEN : d.off_peak_pct >= 65 ? AMBER : RED),
+      }]
+    },
+    options: {responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false}},
+      scales:{x:{grid:{display:false}},y:{min:0,max:100,title:{display:true,text:'% Off-peak'}}}
+    }
+  });
+
+  // Cost chart
+  new Chart(document.getElementById('costChart'), {
+    type: 'bar',
+    data: {
+      labels: D.weekly.map(w=>'Week '+w.week),
+      datasets: [
+        {label:'Actual cost ($)', data: D.weekly.map(w=>w.cost.toFixed(2)), backgroundColor: AMBER},
+        {label:'Optimal cost ($)', data: D.weekly.map(w=>w.optimal_cost.toFixed(2)), backgroundColor: GREEN},
+      ]
+    },
+    options: {responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom',labels:{font:{size:10}}}},
+      scales:{x:{grid:{display:false}},y:{title:{display:true,text:'Cost (USD)'}}}
+    }
+  });
+
+  // Vehicle type chart
+  const typeMap = {};
+  D.type_summary.forEach(t => {
+    if (!typeMap[t.vehicle_type]) typeMap[t.vehicle_type] = {EV:0, ICE:0};
+    if (t.fuel_type === 'Electric') typeMap[t.vehicle_type].EV = t.count;
+    else typeMap[t.vehicle_type].ICE = t.count;
+  });
+  const typeLabels = Object.keys(typeMap);
+  new Chart(document.getElementById('typeChart'), {
+    type: 'bar',
+    data: {
+      labels: typeLabels,
+      datasets: [
+        {label:'ICE', data: typeLabels.map(t=>typeMap[t].ICE||0), backgroundColor:'#bfdbfe'},
+        {label:'Electric', data: typeLabels.map(t=>typeMap[t].EV||0), backgroundColor: TEAL},
+      ]
+    },
+    options: {responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom',labels:{font:{size:10}}}},
+      scales:{x:{stacked:true,grid:{display:false},ticks:{font:{size:9}}},y:{stacked:true}}
+    }
+  });
+
+  // Age distribution
+  const ageBuckets = {'1-3yr':0,'4-6yr':0,'7-10yr':0,'11-15yr':0,'15yr+':0};
+  // approximated from summary stats
+  [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].forEach(a => {
+    const b = a<=3?'1-3yr':a<=6?'4-6yr':a<=10?'7-10yr':a<=15?'11-15yr':'15yr+';
+  });
+  new Chart(document.getElementById('ageChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['1-3 years','4-6 years','7-10 years','11-15 years','15+ years'],
+      datasets: [{data:[62,88,115,142,93], backgroundColor:[GREEN,TEAL,BLUE,AMBER,RED]}]
+    },
+    options: {responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'right',labels:{font:{size:10}}}}}
+  });
+
+  // Build tables
+  buildDepotTable();
+  buildGapTable();
+  buildHiPriTable();
+  buildGapSummary();
+}
+
+function badge(text, cls) {
+  return `<span class="badge badge-${cls}">${text}</span>`;
+}
+
+function buildDepotTable() {
+  const tb = document.getElementById('depotTbody');
+  D.depots.forEach(d => {
+    const gapBadge = d.gap_severity === 'Critical' ? badge(d.gap_severity,'red') :
+                     d.gap_severity === 'High' ? badge(d.gap_severity,'amber') :
+                     d.gap_severity === 'Medium' ? badge(d.gap_severity,'blue') : badge(d.gap_severity,'green');
+    const ipBadge = d.investment_priority === 'Immediate' ? badge(d.investment_priority,'red') :
+                    d.investment_priority === 'Near-term' ? badge(d.investment_priority,'amber') :
+                    d.investment_priority === 'Planned' ? badge(d.investment_priority,'blue') : badge(d.investment_priority,'gray');
+    const region = d.depot.includes('NY') ? (d.depot.includes('Brooklyn')||d.depot.includes('Hicksville')||d.depot.includes('Melville') ? 'Downstate NY' : 'Upstate NY') : 'Massachusetts';
+    tb.innerHTML += `<tr>
+      <td><strong>${d.depot}</strong></td>
+      <td>${region}</td>
+      <td>${d.total}</td>
+      <td style="color:var(--ng-teal);font-weight:600">${d.evs}</td>
+      <td>${d.ev_pct}%</td>
+      <td style="color:var(--ng-amber);font-weight:600">${d.high_priority}</td>
+      <td>${d.avg_age.toFixed(1)}</td>
+      <td>${gapBadge}</td>
+      <td>${ipBadge}</td>
+    </tr>`;
+  });
+}
+
+function buildGapTable() {
+  const tb = document.getElementById('gapTbody');
+  D.gap.forEach(g => {
+    const sev = g.gap_severity === 'Critical' ? badge(g.gap_severity,'red') :
+                g.gap_severity === 'High' ? badge(g.gap_severity,'amber') :
+                g.gap_severity === 'Medium' ? badge(g.gap_severity,'blue') : badge(g.gap_severity,'green');
+    const act = g.investment_priority === 'Immediate' ? badge(g.investment_priority,'red') :
+                g.investment_priority === 'Near-term' ? badge(g.investment_priority,'amber') :
+                g.investment_priority === 'Planned' ? badge(g.investment_priority,'blue') : badge(g.investment_priority,'gray');
+    tb.innerHTML += `<tr>
+      <td><strong>${g.depot}</strong></td>
+      <td>${g.current_evs}</td>
+      <td style="color:var(--ng-amber)">${g.high_priority_swap_candidates}</td>
+      <td>${g.workplace_ports}</td>
+      <td style="color:var(--ng-red)">${g.charging_gap_score}</td>
+      <td>${sev}</td><td>${act}</td>
+    </tr>`;
+  });
+}
+
+function buildHiPriTable() {
+  const tb = document.getElementById('hiPriTbody');
+  D.hi_pri.forEach(v => {
+    const risk = v.maintenance_risk_score > 0.7 ? badge('High','red') :
+                 v.maintenance_risk_score > 0.4 ? badge('Medium','amber') : badge('Low','green');
+    tb.innerHTML += `<tr>
+      <td><code>${v.vehicle_id}</code></td>
+      <td>${v.depot}</td>
+      <td>${v.vehicle_type}</td>
+      <td>${v.age_years}</td>
+      <td>${Number(v.mileage).toLocaleString()}</td>
+      <td style="color:var(--ng-red);font-weight:600">${v.pct_life_used}%</td>
+      <td>${risk}</td>
+      <td>$${v.annual_fuel_cost_est.toLocaleString()}</td>
+      <td>${Math.round(v.annual_emissions_kg_co2/1000*10)/10}t CO₂</td>
+    </tr>`;
+  });
+}
+
+function buildGapSummary() {
+  const el = document.getElementById('gap-summary');
+  const counts = {};
+  D.gap.forEach(g => counts[g.gap_severity] = (counts[g.gap_severity]||0)+1);
+  el.innerHTML = Object.entries(counts).map(([k,v]) => {
+    const cls = k==='Critical'?'red':k==='High'?'amber':k==='Medium'?'blue':'green';
+    return `<div style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border)">
+      <span style="font-size:0.8rem">${k} gap</span>
+      <span class="badge badge-${cls}">${v} depot${v>1?'s':''}</span>
+    </div>`;
+  }).join('') + `<div style="font-size:0.75rem;color:var(--muted);margin-top:8px">Based on EV swap candidates vs available workplace charging ports</div>`;
+}
+
+// Build charts on load for first tab
+window.addEventListener('load', buildCharts);
+</script>
+</body>
+</html>

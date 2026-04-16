@@ -1,0 +1,9 @@
+depot,region,depot_lat,depot_lng,current_evs,high_priority_swap_candidates,total_nearby_stations,total_nearby_ports,workplace_ports,charging_gap_score,gap_severity,investment_priority
+"Syracuse, NY",Upstate NY,43.0481,-76.1474,4,4,15,71,15,0,Low,Monitor
+"Albany, NY",Upstate NY,42.6526,-73.7562,1,2,23,124,22,0,Low,Monitor
+"Utica, NY",Upstate NY,43.1009,-75.2327,3,4,7,40,8,0,Low,Monitor
+"Brooklyn, NY",Downstate NY,40.6782,-73.9442,2,5,57,288,54,0,Low,Monitor
+"Hicksville, NY",Downstate NY,40.7682,-73.5254,0,4,28,140,34,0,Low,Monitor
+"Melville, NY",Downstate NY,40.7896,-73.4079,3,3,23,127,19,0,Low,Monitor
+"Worcester, MA",Massachusetts,42.2626,-71.8023,1,4,18,88,25,0,Low,Monitor
+"Waltham, MA",Massachusetts,42.3765,-71.2356,1,5,36,176,34,0,Low,Monitor

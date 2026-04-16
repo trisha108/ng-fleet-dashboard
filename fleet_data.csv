@@ -1,0 +1,501 @@
+vehicle_id,depot,region,depot_lat,depot_lng,vehicle_type,weight_class,ev_capable,fuel_type,age_years,mileage,pct_life_used,maintenance_risk_score,ev_swap_priority,ev_swap_priority_label,annual_fuel_cost_est,annual_emissions_kg_co2
+NG-US-0001,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Bucket truck,Class 6,False,ICE (Diesel/Gas),1,10920,6.7,0.096,0.0,N/A (not EV-eligible),1508,5019
+NG-US-0002,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Service truck,Class 4,False,ICE (Diesel/Gas),1,14532,8.3,0.072,0.0,N/A (not EV-eligible),1699,6066
+NG-US-0003,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,38158,20.0,0.208,0.356,Medium,2294,6554
+NG-US-0004,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Digger derrick,Class 7,False,ICE (Diesel/Gas),10,74888,50.0,0.422,0.0,N/A (not EV-eligible),1048,3126
+NG-US-0005,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,20502,10.0,0.246,0.352,Medium,2176,7960
+NG-US-0006,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,99595,40.0,0.508,0.471,Medium,2748,8081
+NG-US-0007,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,29949,20.0,0.17,0.231,Low,2219,7075
+NG-US-0008,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,39899,20.0,0.284,0.364,Medium,2466,9295
+NG-US-0009,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,64574,30.0,0.369,0.454,Medium,2308,7673
+NG-US-0010,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,16671,10.0,0.12,0.437,Medium,2323,7002
+NG-US-0011,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Bucket truck,Class 6,False,ICE (Diesel/Gas),4,55959,26.7,0.318,0.0,N/A (not EV-eligible),1372,4602
+NG-US-0012,"Syracuse, NY",Upstate NY,43.0481,-76.1474,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,51692,25.0,0.282,0.238,Low,3299,10119
+NG-US-0013,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,15189,10.0,0.234,0.229,Low,1971,7100
+NG-US-0014,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Service truck,Class 4,False,ICE (Diesel/Gas),4,71306,33.3,0.458,0.0,N/A (not EV-eligible),1624,6328
+NG-US-0015,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Bucket truck,Class 6,False,ICE (Diesel/Gas),5,54404,33.3,0.386,0.0,N/A (not EV-eligible),1328,4785
+NG-US-0016,"Syracuse, NY",Upstate NY,43.0481,-76.1474,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),7,201310,87.5,0.838,0.596,Medium,3248,10848
+NG-US-0017,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),5,114795,50.0,0.559,0.516,Medium,2787,8942
+NG-US-0018,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,29080,20.0,0.324,0.453,Medium,2077,6629
+NG-US-0019,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Digger derrick,Class 7,False,ICE (Diesel/Gas),16,106785,80.0,0.697,0.0,N/A (not EV-eligible),877,3400
+NG-US-0020,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Bucket truck,Class 6,False,ICE (Diesel/Gas),2,23763,13.3,0.216,0.0,N/A (not EV-eligible),1372,5209
+NG-US-0021,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,44692,20.0,0.201,0.245,Low,2901,9154
+NG-US-0022,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,74659,40.0,0.369,0.475,Medium,2498,8391
+NG-US-0023,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),5,80242,50.0,0.556,0.328,Low,2047,7518
+NG-US-0024,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,21136,10.0,0.18,0.374,Medium,2293,6822
+NG-US-0025,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,52349,30.0,0.383,0.449,Medium,2369,6688
+NG-US-0026,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,50365,20.0,0.207,0.299,Low,2599,8494
+NG-US-0027,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),8,140724,80.0,0.745,0.5,Medium,2376,7761
+NG-US-0028,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Service truck,Class 4,False,ICE (Diesel/Gas),10,170922,83.3,0.735,0.0,N/A (not EV-eligible),1795,5713
+NG-US-0029,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),1,20935,10.0,0.132,0.374,Medium,2616,8751
+NG-US-0030,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Service truck,Class 4,False,ICE (Diesel/Gas),12,184015,100.0,0.944,0.0,N/A (not EV-eligible),1676,5814
+NG-US-0031,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Service truck,Class 4,False,ICE (Diesel/Gas),5,76266,41.7,0.485,0.0,N/A (not EV-eligible),1641,6162
+NG-US-0032,"Syracuse, NY",Upstate NY,43.0481,-76.1474,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),6,129446,75.0,0.585,0.524,Medium,3057,10454
+NG-US-0033,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,20810,10.0,0.204,0.308,Low,2125,7394
+NG-US-0034,"Syracuse, NY",Upstate NY,43.0481,-76.1474,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),7,154298,87.5,0.717,0.683,High,3103,9696
+NG-US-0035,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),6,109430,60.0,0.649,0.758,High,2415,8378
+NG-US-0036,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),8,202813,80.0,0.75,0.543,Medium,2816,9250
+NG-US-0037,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Bucket truck,Class 6,False,ICE (Diesel/Gas),14,178347,93.3,0.765,0.0,N/A (not EV-eligible),1531,4653
+NG-US-0038,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Bucket truck,Class 6,False,ICE (Diesel/Gas),12,122935,80.0,0.628,0.0,N/A (not EV-eligible),1327,4900
+NG-US-0039,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,95660,40.0,0.457,0.346,Low,2634,9609
+NG-US-0040,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Digger derrick,Class 7,False,ICE (Diesel/Gas),1,7755,5.0,0.095,0.0,N/A (not EV-eligible),865,3407
+NG-US-0041,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Bucket truck,Class 6,False,ICE (Diesel/Gas),3,39474,20.0,0.276,0.0,N/A (not EV-eligible),1419,4373
+NG-US-0042,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),7,146358,70.0,0.761,0.653,High,2008,6730
+NG-US-0043,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),8,196847,80.0,0.848,0.564,Medium,2508,8182
+NG-US-0044,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Digger derrick,Class 7,False,ICE (Diesel/Gas),14,107806,70.0,0.676,0.0,N/A (not EV-eligible),894,3510
+NG-US-0045,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Digger derrick,Class 7,False,ICE (Diesel/Gas),18,161900,90.0,0.926,0.0,N/A (not EV-eligible),869,3385
+NG-US-0046,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),8,197277,80.0,0.831,0.587,Medium,2792,8191
+NG-US-0047,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Digger derrick,Class 7,False,ICE (Diesel/Gas),13,92453,65.0,0.662,0.0,N/A (not EV-eligible),952,3106
+NG-US-0048,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Digger derrick,Class 7,False,ICE (Diesel/Gas),3,19427,15.0,0.15,0.0,N/A (not EV-eligible),927,3468
+NG-US-0049,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Service truck,Class 4,False,ICE (Diesel/Gas),2,31698,16.7,0.216,0.0,N/A (not EV-eligible),1973,6104
+NG-US-0050,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Service truck,Class 4,False,ICE (Diesel/Gas),1,17822,8.3,0.107,0.0,N/A (not EV-eligible),1967,5776
+NG-US-0051,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,58937,30.0,0.369,0.385,Medium,2110,7383
+NG-US-0052,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),5,88074,50.0,0.478,0.588,Medium,2768,9191
+NG-US-0053,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),1,23445,10.0,0.145,0.399,Medium,2756,8533
+NG-US-0054,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,63423,30.0,0.262,0.348,Low,2873,9203
+NG-US-0055,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Service truck,Class 4,False,ICE (Diesel/Gas),5,69028,41.7,0.433,0.0,N/A (not EV-eligible),1620,5802
+NG-US-0056,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,93446,40.0,0.416,0.325,Low,2626,9601
+NG-US-0057,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Digger derrick,Class 7,False,ICE (Diesel/Gas),2,13343,10.0,0.178,0.0,N/A (not EV-eligible),986,3125
+NG-US-0058,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Digger derrick,Class 7,False,ICE (Diesel/Gas),11,94082,55.0,0.496,0.0,N/A (not EV-eligible),902,2925
+NG-US-0059,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,Electric,3,61554,30.0,0.335,0.0,Already EV,0,0
+NG-US-0060,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Bucket truck,Class 6,False,ICE (Diesel/Gas),2,25885,13.3,0.209,0.0,N/A (not EV-eligible),1366,4999
+NG-US-0061,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),6,119666,60.0,0.584,0.43,Medium,2358,7298
+NG-US-0062,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,41016,20.0,0.329,0.387,Medium,2371,7411
+NG-US-0063,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Service truck,Class 4,False,ICE (Diesel/Gas),9,141083,75.0,0.754,0.0,N/A (not EV-eligible),1802,6461
+NG-US-0064,"Syracuse, NY",Upstate NY,43.0481,-76.1474,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),6,164619,75.0,0.674,0.549,Medium,3083,10637
+NG-US-0065,"Syracuse, NY",Upstate NY,43.0481,-76.1474,SUV/response vehicle,Class 1,True,Electric,4,90984,50.0,0.444,0.0,Already EV,0,0
+NG-US-0066,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,44707,20.0,0.207,0.398,Medium,2749,8113
+NG-US-0067,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,85035,40.0,0.4,0.602,Medium,2684,9236
+NG-US-0068,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Digger derrick,Class 7,False,ICE (Diesel/Gas),11,83789,55.0,0.433,0.0,N/A (not EV-eligible),932,3396
+NG-US-0069,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Digger derrick,Class 7,False,ICE (Diesel/Gas),17,131595,85.0,0.821,0.0,N/A (not EV-eligible),969,3299
+NG-US-0070,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,Electric,2,35076,20.0,0.226,0.0,Already EV,0,0
+NG-US-0071,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Bucket truck,Class 6,False,ICE (Diesel/Gas),4,41569,26.7,0.296,0.0,N/A (not EV-eligible),1333,4967
+NG-US-0072,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,Electric,3,55391,30.0,0.371,0.0,Already EV,0,0
+NG-US-0073,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,44286,30.0,0.266,0.311,Low,2273,7096
+NG-US-0074,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Bucket truck,Class 6,False,ICE (Diesel/Gas),10,108109,66.7,0.53,0.0,N/A (not EV-eligible),1302,4886
+NG-US-0075,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Service truck,Class 4,False,ICE (Diesel/Gas),3,47703,25.0,0.361,0.0,N/A (not EV-eligible),1855,6368
+NG-US-0076,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Service truck,Class 4,False,ICE (Diesel/Gas),2,24245,16.7,0.154,0.0,N/A (not EV-eligible),1665,6265
+NG-US-0077,"Syracuse, NY",Upstate NY,43.0481,-76.1474,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),1,26995,12.5,0.137,0.318,Low,3149,9321
+NG-US-0078,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Digger derrick,Class 7,False,ICE (Diesel/Gas),17,114681,85.0,0.645,0.0,N/A (not EV-eligible),924,3347
+NG-US-0079,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Service truck,Class 4,False,ICE (Diesel/Gas),3,48870,25.0,0.222,0.0,N/A (not EV-eligible),1869,6214
+NG-US-0080,"Syracuse, NY",Upstate NY,43.0481,-76.1474,Light-duty van,Class 2,True,ICE (Diesel/Gas),6,123133,60.0,0.529,0.754,High,2282,7050
+NG-US-0081,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,66157,30.0,0.41,0.509,Medium,2432,9707
+NG-US-0082,"Albany, NY",Upstate NY,42.6526,-73.7562,Bucket truck,Class 6,False,ICE (Diesel/Gas),10,129951,66.7,0.637,0.0,N/A (not EV-eligible),1507,5299
+NG-US-0083,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),6,134016,60.0,0.57,0.652,High,2518,9513
+NG-US-0084,"Albany, NY",Upstate NY,42.6526,-73.7562,Digger derrick,Class 7,False,ICE (Diesel/Gas),1,9221,5.0,0.091,0.0,N/A (not EV-eligible),953,3303
+NG-US-0085,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),1,25088,10.0,0.127,0.379,Medium,2556,9564
+NG-US-0086,"Albany, NY",Upstate NY,42.6526,-73.7562,Bucket truck,Class 6,False,ICE (Diesel/Gas),3,28946,20.0,0.338,0.0,N/A (not EV-eligible),1321,5061
+NG-US-0087,"Albany, NY",Upstate NY,42.6526,-73.7562,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),5,134530,62.5,0.612,0.692,High,2756,9538
+NG-US-0088,"Albany, NY",Upstate NY,42.6526,-73.7562,Bucket truck,Class 6,False,ICE (Diesel/Gas),3,37174,20.0,0.257,0.0,N/A (not EV-eligible),1449,4776
+NG-US-0089,"Albany, NY",Upstate NY,42.6526,-73.7562,Bucket truck,Class 6,False,ICE (Diesel/Gas),3,38921,20.0,0.219,0.0,N/A (not EV-eligible),1368,4480
+NG-US-0090,"Albany, NY",Upstate NY,42.6526,-73.7562,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,18258,10.0,0.117,0.147,Low,2153,7599
+NG-US-0091,"Albany, NY",Upstate NY,42.6526,-73.7562,Service truck,Class 4,False,ICE (Diesel/Gas),4,54792,33.3,0.278,0.0,N/A (not EV-eligible),1690,5730
+NG-US-0092,"Albany, NY",Upstate NY,42.6526,-73.7562,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,18246,10.0,0.275,0.281,Low,2245,6728
+NG-US-0093,"Albany, NY",Upstate NY,42.6526,-73.7562,Digger derrick,Class 7,False,ICE (Diesel/Gas),6,55156,30.0,0.368,0.0,N/A (not EV-eligible),954,3194
+NG-US-0094,"Albany, NY",Upstate NY,42.6526,-73.7562,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,21176,10.0,0.25,0.22,Low,1976,7460
+NG-US-0095,"Albany, NY",Upstate NY,42.6526,-73.7562,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,18452,10.0,0.28,0.107,Low,2274,7427
+NG-US-0096,"Albany, NY",Upstate NY,42.6526,-73.7562,Digger derrick,Class 7,False,ICE (Diesel/Gas),3,24217,15.0,0.211,0.0,N/A (not EV-eligible),949,3465
+NG-US-0097,"Albany, NY",Upstate NY,42.6526,-73.7562,Service truck,Class 4,False,ICE (Diesel/Gas),3,47178,25.0,0.326,0.0,N/A (not EV-eligible),1886,6602
+NG-US-0098,"Albany, NY",Upstate NY,42.6526,-73.7562,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,38310,20.0,0.199,0.15,Low,1945,7200
+NG-US-0099,"Albany, NY",Upstate NY,42.6526,-73.7562,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,44630,25.0,0.333,0.332,Low,3112,10956
+NG-US-0100,"Albany, NY",Upstate NY,42.6526,-73.7562,Digger derrick,Class 7,False,ICE (Diesel/Gas),8,68126,40.0,0.514,0.0,N/A (not EV-eligible),946,3261
+NG-US-0101,"Albany, NY",Upstate NY,42.6526,-73.7562,Bucket truck,Class 6,False,ICE (Diesel/Gas),11,149246,73.3,0.63,0.0,N/A (not EV-eligible),1344,4661
+NG-US-0102,"Albany, NY",Upstate NY,42.6526,-73.7562,Bucket truck,Class 6,False,ICE (Diesel/Gas),6,65912,40.0,0.335,0.0,N/A (not EV-eligible),1494,5042
+NG-US-0103,"Albany, NY",Upstate NY,42.6526,-73.7562,Service truck,Class 4,False,ICE (Diesel/Gas),4,59851,33.3,0.283,0.0,N/A (not EV-eligible),1634,5978
+NG-US-0104,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,36807,20.0,0.317,0.35,Low,2878,9776
+NG-US-0105,"Albany, NY",Upstate NY,42.6526,-73.7562,Bucket truck,Class 6,False,ICE (Diesel/Gas),3,29379,20.0,0.3,0.0,N/A (not EV-eligible),1432,4995
+NG-US-0106,"Albany, NY",Upstate NY,42.6526,-73.7562,Service truck,Class 4,False,ICE (Diesel/Gas),2,31024,16.7,0.262,0.0,N/A (not EV-eligible),1797,5565
+NG-US-0107,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,46994,20.0,0.23,0.397,Medium,2528,9679
+NG-US-0108,"Albany, NY",Upstate NY,42.6526,-73.7562,Digger derrick,Class 7,False,ICE (Diesel/Gas),7,54988,35.0,0.341,0.0,N/A (not EV-eligible),926,3536
+NG-US-0109,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,105182,40.0,0.452,0.405,Medium,2475,8642
+NG-US-0110,"Albany, NY",Upstate NY,42.6526,-73.7562,Bucket truck,Class 6,False,ICE (Diesel/Gas),7,92736,46.7,0.429,0.0,N/A (not EV-eligible),1454,5263
+NG-US-0111,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),5,93343,50.0,0.499,0.396,Medium,2460,8978
+NG-US-0112,"Albany, NY",Upstate NY,42.6526,-73.7562,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),1,29923,12.5,0.2,0.122,Low,3199,10097
+NG-US-0113,"Albany, NY",Upstate NY,42.6526,-73.7562,Bucket truck,Class 6,False,ICE (Diesel/Gas),5,54562,33.3,0.425,0.0,N/A (not EV-eligible),1578,4600
+NG-US-0114,"Albany, NY",Upstate NY,42.6526,-73.7562,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,58437,25.0,0.389,0.496,Medium,2866,10686
+NG-US-0115,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),8,176545,80.0,0.697,0.599,Medium,2686,9775
+NG-US-0116,"Albany, NY",Upstate NY,42.6526,-73.7562,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),1,25386,12.5,0.211,0.292,Low,2973,9740
+NG-US-0117,"Albany, NY",Upstate NY,42.6526,-73.7562,Light-duty van,Class 2,True,ICE (Diesel/Gas),5,92585,50.0,0.559,0.317,Low,2266,7570
+NG-US-0118,"Albany, NY",Upstate NY,42.6526,-73.7562,Digger derrick,Class 7,False,ICE (Diesel/Gas),5,42619,25.0,0.369,0.0,N/A (not EV-eligible),1052,3229
+NG-US-0119,"Albany, NY",Upstate NY,42.6526,-73.7562,Light-duty van,Class 2,True,ICE (Diesel/Gas),4,74597,40.0,0.499,0.416,Medium,2171,7209
+NG-US-0120,"Albany, NY",Upstate NY,42.6526,-73.7562,Bucket truck,Class 6,False,ICE (Diesel/Gas),4,50972,26.7,0.249,0.0,N/A (not EV-eligible),1431,5303
+NG-US-0121,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),5,116593,50.0,0.579,0.644,Medium,2577,8562
+NG-US-0122,"Albany, NY",Upstate NY,42.6526,-73.7562,Bucket truck,Class 6,False,ICE (Diesel/Gas),8,110300,53.3,0.458,0.0,N/A (not EV-eligible),1316,4975
+NG-US-0123,"Albany, NY",Upstate NY,42.6526,-73.7562,Service truck,Class 4,False,ICE (Diesel/Gas),12,197767,100.0,0.887,0.0,N/A (not EV-eligible),1655,6222
+NG-US-0124,"Albany, NY",Upstate NY,42.6526,-73.7562,Digger derrick,Class 7,False,ICE (Diesel/Gas),6,51725,30.0,0.428,0.0,N/A (not EV-eligible),873,3423
+NG-US-0125,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,56643,30.0,0.34,0.497,Medium,2466,8140
+NG-US-0126,"Albany, NY",Upstate NY,42.6526,-73.7562,Digger derrick,Class 7,False,ICE (Diesel/Gas),8,57365,40.0,0.49,0.0,N/A (not EV-eligible),891,3207
+NG-US-0127,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,35365,20.0,0.328,0.391,Medium,2459,8784
+NG-US-0128,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,92891,40.0,0.377,0.578,Medium,2481,8683
+NG-US-0129,"Albany, NY",Upstate NY,42.6526,-73.7562,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,51438,25.0,0.401,0.268,Low,3287,10420
+NG-US-0130,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,94540,40.0,0.339,0.483,Medium,2638,9606
+NG-US-0131,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),6,137653,60.0,0.615,0.608,Medium,2734,9281
+NG-US-0132,"Albany, NY",Upstate NY,42.6526,-73.7562,Bucket truck,Class 6,False,ICE (Diesel/Gas),10,126156,66.7,0.724,0.0,N/A (not EV-eligible),1482,4663
+NG-US-0133,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,96179,40.0,0.39,0.539,Medium,2469,8234
+NG-US-0134,"Albany, NY",Upstate NY,42.6526,-73.7562,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),7,177160,87.5,0.869,0.628,Medium,3195,10063
+NG-US-0135,"Albany, NY",Upstate NY,42.6526,-73.7562,Digger derrick,Class 7,False,ICE (Diesel/Gas),11,82323,55.0,0.452,0.0,N/A (not EV-eligible),1049,3000
+NG-US-0136,"Albany, NY",Upstate NY,42.6526,-73.7562,Service truck,Class 4,False,ICE (Diesel/Gas),8,130762,66.7,0.747,0.0,N/A (not EV-eligible),1968,6429
+NG-US-0137,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),6,106335,60.0,0.536,0.629,Medium,2731,9038
+NG-US-0138,"Albany, NY",Upstate NY,42.6526,-73.7562,Digger derrick,Class 7,False,ICE (Diesel/Gas),16,107947,80.0,0.649,0.0,N/A (not EV-eligible),869,3480
+NG-US-0139,"Albany, NY",Upstate NY,42.6526,-73.7562,SUV/response vehicle,Class 1,True,Electric,6,133282,75.0,0.74,0.0,Already EV,0,0
+NG-US-0140,"Albany, NY",Upstate NY,42.6526,-73.7562,Service truck,Class 4,False,ICE (Diesel/Gas),3,43349,25.0,0.225,0.0,N/A (not EV-eligible),1961,5823
+NG-US-0141,"Albany, NY",Upstate NY,42.6526,-73.7562,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),1,28873,12.5,0.197,0.343,Low,3146,11001
+NG-US-0142,"Albany, NY",Upstate NY,42.6526,-73.7562,Pickup truck,Class 2,True,ICE (Diesel/Gas),6,113759,60.0,0.475,0.556,Medium,2591,9691
+NG-US-0143,"Albany, NY",Upstate NY,42.6526,-73.7562,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,52777,30.0,0.409,0.22,Low,2240,7337
+NG-US-0144,"Albany, NY",Upstate NY,42.6526,-73.7562,Service truck,Class 4,False,ICE (Diesel/Gas),3,43167,25.0,0.235,0.0,N/A (not EV-eligible),1664,6482
+NG-US-0145,"Albany, NY",Upstate NY,42.6526,-73.7562,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),4,105668,50.0,0.413,0.615,Medium,2846,9344
+NG-US-0146,"Utica, NY",Upstate NY,43.1009,-75.2327,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),1,27652,12.5,0.147,0.423,Medium,2897,9388
+NG-US-0147,"Utica, NY",Upstate NY,43.1009,-75.2327,Service truck,Class 4,False,ICE (Diesel/Gas),1,17150,8.3,0.099,0.0,N/A (not EV-eligible),1667,5758
+NG-US-0148,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,Electric,5,72928,50.0,0.53,0.0,Already EV,0,0
+NG-US-0149,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,Electric,2,31309,20.0,0.301,0.0,Already EV,0,0
+NG-US-0150,"Utica, NY",Upstate NY,43.1009,-75.2327,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),5,123812,62.5,0.601,0.419,Medium,3002,11000
+NG-US-0151,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),6,123854,60.0,0.598,0.746,High,1970,7241
+NG-US-0152,"Utica, NY",Upstate NY,43.1009,-75.2327,Pickup truck,Class 2,True,ICE (Diesel/Gas),5,109572,50.0,0.414,0.332,Low,2697,8116
+NG-US-0153,"Utica, NY",Upstate NY,43.1009,-75.2327,Pickup truck,Class 2,True,ICE (Diesel/Gas),5,112128,50.0,0.602,0.512,Medium,2616,9075
+NG-US-0154,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),5,102701,50.0,0.575,0.588,Medium,2037,7202
+NG-US-0155,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,35330,20.0,0.178,0.291,Low,2231,7089
+NG-US-0156,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),8,119067,80.0,0.617,0.519,Medium,2263,7725
+NG-US-0157,"Utica, NY",Upstate NY,43.1009,-75.2327,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),4,102463,50.0,0.428,0.441,Medium,3099,10606
+NG-US-0158,"Utica, NY",Upstate NY,43.1009,-75.2327,Digger derrick,Class 7,False,ICE (Diesel/Gas),10,94989,50.0,0.548,0.0,N/A (not EV-eligible),932,3282
+NG-US-0159,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),5,80073,50.0,0.553,0.447,Medium,2273,7380
+NG-US-0160,"Utica, NY",Upstate NY,43.1009,-75.2327,Digger derrick,Class 7,False,ICE (Diesel/Gas),13,123741,65.0,0.721,0.0,N/A (not EV-eligible),982,3324
+NG-US-0161,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),8,162977,80.0,0.708,0.761,High,2077,7039
+NG-US-0162,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),7,129343,70.0,0.594,0.673,High,1957,7630
+NG-US-0163,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,50563,30.0,0.379,0.491,Medium,2189,6668
+NG-US-0164,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,18848,10.0,0.136,0.325,Low,2154,7188
+NG-US-0165,"Utica, NY",Upstate NY,43.1009,-75.2327,Pickup truck,Class 2,True,ICE (Diesel/Gas),6,111610,60.0,0.509,0.631,Medium,2633,9185
+NG-US-0166,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,Electric,3,56145,30.0,0.304,0.0,Already EV,0,0
+NG-US-0167,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,16240,10.0,0.079,0.359,Medium,2020,7098
+NG-US-0168,"Utica, NY",Upstate NY,43.1009,-75.2327,Bucket truck,Class 6,False,ICE (Diesel/Gas),5,68001,33.3,0.441,0.0,N/A (not EV-eligible),1317,5199
+NG-US-0169,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,21032,10.0,0.2,0.289,Low,2251,7152
+NG-US-0170,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,16738,10.0,0.202,0.393,Medium,2341,6673
+NG-US-0171,"Utica, NY",Upstate NY,43.1009,-75.2327,Digger derrick,Class 7,False,ICE (Diesel/Gas),3,24853,15.0,0.226,0.0,N/A (not EV-eligible),940,3109
+NG-US-0172,"Utica, NY",Upstate NY,43.1009,-75.2327,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,38159,20.0,0.175,0.324,Low,2854,8620
+NG-US-0173,"Utica, NY",Upstate NY,43.1009,-75.2327,Bucket truck,Class 6,False,ICE (Diesel/Gas),9,121610,60.0,0.55,0.0,N/A (not EV-eligible),1338,4554
+NG-US-0174,"Utica, NY",Upstate NY,43.1009,-75.2327,Bucket truck,Class 6,False,ICE (Diesel/Gas),8,101972,53.3,0.472,0.0,N/A (not EV-eligible),1519,4842
+NG-US-0175,"Utica, NY",Upstate NY,43.1009,-75.2327,Bucket truck,Class 6,False,ICE (Diesel/Gas),8,94038,53.3,0.608,0.0,N/A (not EV-eligible),1459,4979
+NG-US-0176,"Utica, NY",Upstate NY,43.1009,-75.2327,Bucket truck,Class 6,False,ICE (Diesel/Gas),10,126106,66.7,0.574,0.0,N/A (not EV-eligible),1316,4792
+NG-US-0177,"Utica, NY",Upstate NY,43.1009,-75.2327,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,36189,20.0,0.211,0.301,Low,2406,9478
+NG-US-0178,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),7,143907,70.0,0.691,0.605,Medium,2183,7696
+NG-US-0179,"Utica, NY",Upstate NY,43.1009,-75.2327,Service truck,Class 4,False,ICE (Diesel/Gas),4,67436,33.3,0.409,0.0,N/A (not EV-eligible),1736,6030
+NG-US-0180,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,15145,10.0,0.144,0.346,Low,2162,6796
+NG-US-0181,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,52692,30.0,0.27,0.329,Low,2066,7139
+NG-US-0182,"Utica, NY",Upstate NY,43.1009,-75.2327,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,98181,40.0,0.347,0.278,Low,2734,8504
+NG-US-0183,"Utica, NY",Upstate NY,43.1009,-75.2327,Bucket truck,Class 6,False,ICE (Diesel/Gas),7,97653,46.7,0.571,0.0,N/A (not EV-eligible),1392,4928
+NG-US-0184,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,64102,30.0,0.335,0.418,Medium,2349,6995
+NG-US-0185,"Utica, NY",Upstate NY,43.1009,-75.2327,Pickup truck,Class 2,True,ICE (Diesel/Gas),6,148536,60.0,0.668,0.656,High,2738,8935
+NG-US-0186,"Utica, NY",Upstate NY,43.1009,-75.2327,Bucket truck,Class 6,False,ICE (Diesel/Gas),4,45347,26.7,0.281,0.0,N/A (not EV-eligible),1348,4571
+NG-US-0187,"Utica, NY",Upstate NY,43.1009,-75.2327,Service truck,Class 4,False,ICE (Diesel/Gas),4,53437,33.3,0.283,0.0,N/A (not EV-eligible),1648,6477
+NG-US-0188,"Utica, NY",Upstate NY,43.1009,-75.2327,Light-duty van,Class 2,True,ICE (Diesel/Gas),6,122477,60.0,0.512,0.495,Medium,2275,6735
+NG-US-0189,"Utica, NY",Upstate NY,43.1009,-75.2327,Pickup truck,Class 2,True,ICE (Diesel/Gas),1,24916,10.0,0.246,0.126,Low,2607,8730
+NG-US-0190,"Utica, NY",Upstate NY,43.1009,-75.2327,Bucket truck,Class 6,False,ICE (Diesel/Gas),2,23464,13.3,0.163,0.0,N/A (not EV-eligible),1512,4798
+NG-US-0191,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,56172,25.0,0.376,0.297,Low,3268,11079
+NG-US-0192,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,47637,25.0,0.39,0.477,Medium,3181,9370
+NG-US-0193,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Pickup truck,Class 2,True,ICE (Diesel/Gas),5,126461,50.0,0.443,0.638,Medium,2825,8506
+NG-US-0194,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),3,41836,20.0,0.199,0.0,N/A (not EV-eligible),1422,5281
+NG-US-0195,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,Electric,3,50751,30.0,0.245,0.0,Already EV,0,0
+NG-US-0196,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,59891,25.0,0.22,0.522,Medium,3204,10403
+NG-US-0197,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),2,14636,10.0,0.243,0.0,N/A (not EV-eligible),998,2999
+NG-US-0198,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),4,38501,26.7,0.213,0.0,N/A (not EV-eligible),1370,5173
+NG-US-0199,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),5,126389,62.5,0.56,0.495,Medium,2729,9938
+NG-US-0200,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),6,40528,30.0,0.407,0.0,N/A (not EV-eligible),979,2919
+NG-US-0201,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,42872,25.0,0.312,0.246,Low,2950,10432
+NG-US-0202,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),9,133986,90.0,0.775,0.935,High,2183,7113
+NG-US-0203,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),4,119242,50.0,0.432,0.615,Medium,2907,10571
+NG-US-0204,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),9,118160,60.0,0.563,0.0,N/A (not EV-eligible),1309,4893
+NG-US-0205,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),2,17787,10.0,0.176,0.0,N/A (not EV-eligible),998,3317
+NG-US-0206,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),1,8884,5.0,0.133,0.0,N/A (not EV-eligible),920,2937
+NG-US-0207,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,21120,10.0,0.283,0.277,Low,2053,7640
+NG-US-0208,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,60066,30.0,0.316,0.23,Low,2103,7838
+NG-US-0209,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),11,126015,73.3,0.771,0.0,N/A (not EV-eligible),1439,4846
+NG-US-0210,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Service truck,Class 4,False,ICE (Diesel/Gas),4,67228,33.3,0.424,0.0,N/A (not EV-eligible),1648,6184
+NG-US-0211,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),7,51995,35.0,0.289,0.0,N/A (not EV-eligible),991,3107
+NG-US-0212,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),4,51643,26.7,0.29,0.0,N/A (not EV-eligible),1308,5207
+NG-US-0213,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Pickup truck,Class 2,True,ICE (Diesel/Gas),10,200161,100.0,0.963,0.63,Medium,2713,8645
+NG-US-0214,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),9,85040,45.0,0.413,0.0,N/A (not EV-eligible),981,3414
+NG-US-0215,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,20005,10.0,0.16,0.287,Low,2205,7532
+NG-US-0216,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Service truck,Class 4,False,ICE (Diesel/Gas),3,49736,25.0,0.323,0.0,N/A (not EV-eligible),1811,5936
+NG-US-0217,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),3,30434,20.0,0.298,0.0,N/A (not EV-eligible),1440,4738
+NG-US-0218,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,45206,25.0,0.392,0.264,Low,3250,10082
+NG-US-0219,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),7,123583,70.0,0.645,0.455,Medium,2239,7775
+NG-US-0220,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,54514,30.0,0.403,0.521,Medium,2752,9648
+NG-US-0221,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),9,108378,60.0,0.505,0.0,N/A (not EV-eligible),1354,4498
+NG-US-0222,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),1,8173,5.0,0.114,0.0,N/A (not EV-eligible),1018,3265
+NG-US-0223,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),1,11085,6.7,0.252,0.0,N/A (not EV-eligible),1503,4873
+NG-US-0224,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),9,89586,60.0,0.644,0.0,N/A (not EV-eligible),1481,4799
+NG-US-0225,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),3,41443,20.0,0.325,0.0,N/A (not EV-eligible),1480,4540
+NG-US-0226,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Service truck,Class 4,False,ICE (Diesel/Gas),4,69857,33.3,0.294,0.0,N/A (not EV-eligible),1665,5639
+NG-US-0227,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,39014,20.0,0.353,0.478,Medium,2309,6909
+NG-US-0228,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),6,61205,40.0,0.363,0.0,N/A (not EV-eligible),1450,4850
+NG-US-0229,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),8,124082,80.0,0.751,0.722,High,2308,7365
+NG-US-0230,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),1,6545,5.0,0.166,0.0,N/A (not EV-eligible),975,3330
+NG-US-0231,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),4,50669,26.7,0.317,0.0,N/A (not EV-eligible),1477,4644
+NG-US-0232,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Service truck,Class 4,False,ICE (Diesel/Gas),4,67313,33.3,0.416,0.0,N/A (not EV-eligible),1727,5542
+NG-US-0233,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,53660,30.0,0.361,0.305,Low,2254,7613
+NG-US-0234,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),18,122732,90.0,0.754,0.0,N/A (not EV-eligible),972,3115
+NG-US-0235,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,44958,25.0,0.25,0.304,Low,3069,9592
+NG-US-0236,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),2,14896,10.0,0.193,0.0,N/A (not EV-eligible),924,3402
+NG-US-0237,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),3,74963,37.5,0.305,0.603,Medium,3003,11043
+NG-US-0238,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,44292,30.0,0.4,0.442,Medium,2147,7325
+NG-US-0239,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),6,55343,30.0,0.399,0.0,N/A (not EV-eligible),1011,3145
+NG-US-0240,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,77252,40.0,0.32,0.442,Medium,2780,8496
+NG-US-0241,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Service truck,Class 4,False,ICE (Diesel/Gas),6,76277,50.0,0.572,0.0,N/A (not EV-eligible),1762,6417
+NG-US-0242,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Pickup truck,Class 2,True,ICE (Diesel/Gas),8,193950,80.0,0.766,0.68,High,2400,8243
+NG-US-0243,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,64864,30.0,0.342,0.311,Low,2700,8288
+NG-US-0244,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Service truck,Class 4,False,ICE (Diesel/Gas),7,96568,58.3,0.52,0.0,N/A (not EV-eligible),1918,6099
+NG-US-0245,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),3,40547,20.0,0.241,0.0,N/A (not EV-eligible),1490,5313
+NG-US-0246,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),5,136266,62.5,0.522,0.565,Medium,3280,10671
+NG-US-0247,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),6,78376,40.0,0.447,0.0,N/A (not EV-eligible),1345,4973
+NG-US-0248,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),10,103093,66.7,0.641,0.0,N/A (not EV-eligible),1305,5283
+NG-US-0249,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,16659,10.0,0.216,0.224,Low,2279,7884
+NG-US-0250,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),10,65993,50.0,0.401,0.0,N/A (not EV-eligible),904,3119
+NG-US-0251,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),5,55530,33.3,0.294,0.0,N/A (not EV-eligible),1559,4695
+NG-US-0252,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Pickup truck,Class 2,True,ICE (Diesel/Gas),6,143665,60.0,0.635,0.604,Medium,2478,8437
+NG-US-0253,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,59458,25.0,0.272,0.233,Low,3123,9730
+NG-US-0254,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Pickup truck,Class 2,True,ICE (Diesel/Gas),8,196797,80.0,0.693,0.751,High,2576,9742
+NG-US-0255,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),17,152571,85.0,0.769,0.0,N/A (not EV-eligible),919,3370
+NG-US-0256,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,59570,30.0,0.272,0.395,Medium,2869,9237
+NG-US-0257,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),4,74501,40.0,0.458,0.452,Medium,2220,6621
+NG-US-0258,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Pickup truck,Class 2,True,ICE (Diesel/Gas),5,92424,50.0,0.377,0.52,Medium,2867,8723
+NG-US-0259,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Service truck,Class 4,False,ICE (Diesel/Gas),9,133782,75.0,0.638,0.0,N/A (not EV-eligible),1967,5843
+NG-US-0260,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),11,110324,73.3,0.665,0.0,N/A (not EV-eligible),1450,5064
+NG-US-0261,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Service truck,Class 4,False,ICE (Diesel/Gas),9,117453,75.0,0.747,0.0,N/A (not EV-eligible),1683,6569
+NG-US-0262,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Service truck,Class 4,False,ICE (Diesel/Gas),3,44917,25.0,0.387,0.0,N/A (not EV-eligible),1966,6576
+NG-US-0263,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),1,8217,5.0,0.062,0.0,N/A (not EV-eligible),1053,3093
+NG-US-0264,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Service truck,Class 4,False,ICE (Diesel/Gas),5,74817,41.7,0.521,0.0,N/A (not EV-eligible),1926,6021
+NG-US-0265,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,15570,10.0,0.127,0.134,Low,2262,7695
+NG-US-0266,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),5,108775,62.5,0.655,0.706,High,3009,9265
+NG-US-0267,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),2,20550,13.3,0.166,0.0,N/A (not EV-eligible),1367,4616
+NG-US-0268,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),6,127614,60.0,0.657,0.365,Medium,2226,7552
+NG-US-0269,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,16609,10.0,0.178,0.418,Medium,2248,6997
+NG-US-0270,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),8,132194,80.0,0.664,0.533,Medium,2010,7632
+NG-US-0271,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),4,48945,26.7,0.309,0.0,N/A (not EV-eligible),1451,5007
+NG-US-0272,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,39668,20.0,0.182,0.299,Low,2248,6658
+NG-US-0273,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),1,25476,12.5,0.215,0.135,Low,2897,10141
+NG-US-0274,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,37197,20.0,0.264,0.443,Medium,2140,7291
+NG-US-0275,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),1,24624,12.5,0.244,0.233,Low,3190,10597
+NG-US-0276,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,SUV/response vehicle,Class 1,True,Electric,1,23445,12.5,0.296,0.0,Already EV,0,0
+NG-US-0277,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Service truck,Class 4,False,ICE (Diesel/Gas),1,17603,8.3,0.077,0.0,N/A (not EV-eligible),1767,6386
+NG-US-0278,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),14,177803,93.3,0.847,0.0,N/A (not EV-eligible),1582,4734
+NG-US-0279,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Digger derrick,Class 7,False,ICE (Diesel/Gas),15,114031,75.0,0.725,0.0,N/A (not EV-eligible),991,3257
+NG-US-0280,"Brooklyn, NY",Downstate NY,40.6782,-73.9442,Bucket truck,Class 6,False,ICE (Diesel/Gas),3,31370,20.0,0.26,0.0,N/A (not EV-eligible),1448,5069
+NG-US-0281,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,14564,10.0,0.209,0.278,Low,2174,7742
+NG-US-0282,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,49154,30.0,0.377,0.225,Low,2294,7155
+NG-US-0283,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Bucket truck,Class 6,False,ICE (Diesel/Gas),11,106426,73.3,0.585,0.0,N/A (not EV-eligible),1325,4396
+NG-US-0284,"Hicksville, NY",Downstate NY,40.7682,-73.5254,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),4,81947,50.0,0.453,0.394,Medium,2830,10835
+NG-US-0285,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),4,65931,40.0,0.456,0.368,Medium,2202,7523
+NG-US-0286,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,37721,20.0,0.196,0.24,Low,2408,9685
+NG-US-0287,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Digger derrick,Class 7,False,ICE (Diesel/Gas),15,126048,75.0,0.697,0.0,N/A (not EV-eligible),959,3537
+NG-US-0288,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Service truck,Class 4,False,ICE (Diesel/Gas),6,100289,50.0,0.481,0.0,N/A (not EV-eligible),1770,5635
+NG-US-0289,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Pickup truck,Class 2,True,ICE (Diesel/Gas),6,130602,60.0,0.538,0.643,Medium,2801,9625
+NG-US-0290,"Hicksville, NY",Downstate NY,40.7682,-73.5254,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),7,179010,87.5,0.755,0.606,Medium,3088,10953
+NG-US-0291,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Digger derrick,Class 7,False,ICE (Diesel/Gas),1,8719,5.0,0.079,0.0,N/A (not EV-eligible),916,3344
+NG-US-0292,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Bucket truck,Class 6,False,ICE (Diesel/Gas),10,105032,66.7,0.661,0.0,N/A (not EV-eligible),1505,4905
+NG-US-0293,"Hicksville, NY",Downstate NY,40.7682,-73.5254,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),6,139978,75.0,0.588,0.825,High,3277,9327
+NG-US-0294,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Service truck,Class 4,False,ICE (Diesel/Gas),4,53822,33.3,0.377,0.0,N/A (not EV-eligible),1694,6563
+NG-US-0295,"Hicksville, NY",Downstate NY,40.7682,-73.5254,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),5,119033,62.5,0.563,0.48,Medium,3008,10095
+NG-US-0296,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),9,160023,90.0,0.9,0.688,High,2123,7363
+NG-US-0297,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,16278,10.0,0.193,0.227,Low,2010,7025
+NG-US-0298,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Pickup truck,Class 2,True,ICE (Diesel/Gas),7,153957,70.0,0.697,0.523,Medium,2810,9717
+NG-US-0299,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Bucket truck,Class 6,False,ICE (Diesel/Gas),5,52038,33.3,0.412,0.0,N/A (not EV-eligible),1345,5062
+NG-US-0300,"Hicksville, NY",Downstate NY,40.7682,-73.5254,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),7,177950,87.5,0.716,0.539,Medium,3208,10999
+NG-US-0301,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Bucket truck,Class 6,False,ICE (Diesel/Gas),8,92636,53.3,0.59,0.0,N/A (not EV-eligible),1363,5049
+NG-US-0302,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),4,68348,40.0,0.447,0.487,Medium,2153,7254
+NG-US-0303,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),4,57941,40.0,0.352,0.631,Medium,1951,7727
+NG-US-0304,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Bucket truck,Class 6,False,ICE (Diesel/Gas),9,125702,60.0,0.531,0.0,N/A (not EV-eligible),1324,4508
+NG-US-0305,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),4,81078,40.0,0.415,0.389,Medium,2119,7367
+NG-US-0306,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Service truck,Class 4,False,ICE (Diesel/Gas),2,32208,16.7,0.307,0.0,N/A (not EV-eligible),1855,6494
+NG-US-0307,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Bucket truck,Class 6,False,ICE (Diesel/Gas),1,11420,6.7,0.163,0.0,N/A (not EV-eligible),1312,4372
+NG-US-0308,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),4,70097,40.0,0.43,0.583,Medium,1985,7313
+NG-US-0309,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,41301,20.0,0.264,0.139,Low,1976,7891
+NG-US-0310,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Service truck,Class 4,False,ICE (Diesel/Gas),5,60987,41.7,0.496,0.0,N/A (not EV-eligible),1733,6619
+NG-US-0311,"Hicksville, NY",Downstate NY,40.7682,-73.5254,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),5,135636,62.5,0.531,0.44,Medium,2844,10776
+NG-US-0312,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Pickup truck,Class 2,True,ICE (Diesel/Gas),8,164154,80.0,0.652,0.875,High,2758,8889
+NG-US-0313,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Service truck,Class 4,False,ICE (Diesel/Gas),1,14623,8.3,0.234,0.0,N/A (not EV-eligible),1743,6386
+NG-US-0314,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Service truck,Class 4,False,ICE (Diesel/Gas),3,49924,25.0,0.214,0.0,N/A (not EV-eligible),1718,6657
+NG-US-0315,"Hicksville, NY",Downstate NY,40.7682,-73.5254,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,58823,25.0,0.349,0.414,Medium,2751,10340
+NG-US-0316,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Digger derrick,Class 7,False,ICE (Diesel/Gas),10,66625,50.0,0.406,0.0,N/A (not EV-eligible),1001,3319
+NG-US-0317,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Bucket truck,Class 6,False,ICE (Diesel/Gas),3,30334,20.0,0.152,0.0,N/A (not EV-eligible),1385,4712
+NG-US-0318,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Pickup truck,Class 2,True,ICE (Diesel/Gas),1,19249,10.0,0.187,0.223,Low,2390,8628
+NG-US-0319,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),4,66944,40.0,0.37,0.395,Medium,1981,7855
+NG-US-0320,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Service truck,Class 4,False,ICE (Diesel/Gas),11,169749,91.7,0.775,0.0,N/A (not EV-eligible),1757,5622
+NG-US-0321,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,72627,40.0,0.383,0.434,Medium,2417,8447
+NG-US-0322,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),5,93377,50.0,0.427,0.422,Medium,2354,7028
+NG-US-0323,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Bucket truck,Class 6,False,ICE (Diesel/Gas),9,100636,60.0,0.535,0.0,N/A (not EV-eligible),1531,5197
+NG-US-0324,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Service truck,Class 4,False,ICE (Diesel/Gas),1,13924,8.3,0.254,0.0,N/A (not EV-eligible),1692,5835
+NG-US-0325,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Service truck,Class 4,False,ICE (Diesel/Gas),11,151236,91.7,0.849,0.0,N/A (not EV-eligible),1797,6152
+NG-US-0326,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,60836,30.0,0.274,0.406,Medium,2200,7338
+NG-US-0327,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Bucket truck,Class 6,False,ICE (Diesel/Gas),6,85047,40.0,0.434,0.0,N/A (not EV-eligible),1500,4788
+NG-US-0328,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Pickup truck,Class 2,True,ICE (Diesel/Gas),5,124034,50.0,0.501,0.5,Medium,2710,8429
+NG-US-0329,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Bucket truck,Class 6,False,ICE (Diesel/Gas),8,107101,53.3,0.46,0.0,N/A (not EV-eligible),1581,4828
+NG-US-0330,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,102798,40.0,0.449,0.556,Medium,2566,9591
+NG-US-0331,"Hicksville, NY",Downstate NY,40.7682,-73.5254,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),4,83399,50.0,0.507,0.442,Medium,3088,9179
+NG-US-0332,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Service truck,Class 4,False,ICE (Diesel/Gas),6,86386,50.0,0.545,0.0,N/A (not EV-eligible),1968,5976
+NG-US-0333,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,36154,20.0,0.276,0.35,Low,2137,7114
+NG-US-0334,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Bucket truck,Class 6,False,ICE (Diesel/Gas),6,72013,40.0,0.389,0.0,N/A (not EV-eligible),1303,4465
+NG-US-0335,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Pickup truck,Class 2,True,ICE (Diesel/Gas),9,167593,90.0,0.707,0.665,High,2616,8367
+NG-US-0336,"Hicksville, NY",Downstate NY,40.7682,-73.5254,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),3,73145,37.5,0.361,0.345,Low,3186,9322
+NG-US-0337,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Digger derrick,Class 7,False,ICE (Diesel/Gas),9,77102,45.0,0.402,0.0,N/A (not EV-eligible),1053,3066
+NG-US-0338,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,18431,10.0,0.127,0.222,Low,2024,7476
+NG-US-0339,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Pickup truck,Class 2,True,ICE (Diesel/Gas),1,23004,10.0,0.2,0.216,Low,2748,8365
+NG-US-0340,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Bucket truck,Class 6,False,ICE (Diesel/Gas),9,89103,60.0,0.469,0.0,N/A (not EV-eligible),1547,4544
+NG-US-0341,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,59726,30.0,0.337,0.436,Medium,2691,9086
+NG-US-0342,"Hicksville, NY",Downstate NY,40.7682,-73.5254,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,56910,25.0,0.373,0.432,Medium,2878,10331
+NG-US-0343,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,15249,10.0,0.112,0.337,Low,2165,7153
+NG-US-0344,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,47212,30.0,0.367,0.438,Medium,2376,7352
+NG-US-0345,"Hicksville, NY",Downstate NY,40.7682,-73.5254,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),1,23146,12.5,0.108,0.219,Low,2706,9366
+NG-US-0346,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Digger derrick,Class 7,False,ICE (Diesel/Gas),17,136296,85.0,0.78,0.0,N/A (not EV-eligible),995,3177
+NG-US-0347,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Digger derrick,Class 7,False,ICE (Diesel/Gas),6,39987,30.0,0.231,0.0,N/A (not EV-eligible),1010,3098
+NG-US-0348,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,76321,40.0,0.453,0.546,Medium,2666,8200
+NG-US-0349,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),6,121966,60.0,0.668,0.377,Medium,2255,7339
+NG-US-0350,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Service truck,Class 4,False,ICE (Diesel/Gas),1,16980,8.3,0.22,0.0,N/A (not EV-eligible),1727,6665
+NG-US-0351,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,74362,30.0,0.45,0.49,Medium,2501,9440
+NG-US-0352,"Hicksville, NY",Downstate NY,40.7682,-73.5254,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,54215,25.0,0.24,0.206,Low,2824,9508
+NG-US-0353,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,49271,30.0,0.297,0.462,Medium,2069,6934
+NG-US-0354,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Digger derrick,Class 7,False,ICE (Diesel/Gas),18,154328,90.0,0.758,0.0,N/A (not EV-eligible),1049,3417
+NG-US-0355,"Hicksville, NY",Downstate NY,40.7682,-73.5254,Service truck,Class 4,False,ICE (Diesel/Gas),12,206427,100.0,0.825,0.0,N/A (not EV-eligible),1932,5757
+NG-US-0356,"Melville, NY",Downstate NY,40.7896,-73.4079,Bucket truck,Class 6,False,ICE (Diesel/Gas),10,132551,66.7,0.689,0.0,N/A (not EV-eligible),1437,4923
+NG-US-0357,"Melville, NY",Downstate NY,40.7896,-73.4079,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,64733,30.0,0.414,0.217,Low,2648,8494
+NG-US-0358,"Melville, NY",Downstate NY,40.7896,-73.4079,Service truck,Class 4,False,ICE (Diesel/Gas),3,53105,25.0,0.279,0.0,N/A (not EV-eligible),1621,6392
+NG-US-0359,"Melville, NY",Downstate NY,40.7896,-73.4079,Bucket truck,Class 6,False,ICE (Diesel/Gas),8,94404,53.3,0.557,0.0,N/A (not EV-eligible),1399,4425
+NG-US-0360,"Melville, NY",Downstate NY,40.7896,-73.4079,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),1,24296,12.5,0.153,0.406,Medium,2903,10257
+NG-US-0361,"Melville, NY",Downstate NY,40.7896,-73.4079,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),3,70312,37.5,0.303,0.265,Low,3170,10018
+NG-US-0362,"Melville, NY",Downstate NY,40.7896,-73.4079,Light-duty van,Class 2,True,Electric,7,123041,70.0,0.747,0.0,Already EV,0,0
+NG-US-0363,"Melville, NY",Downstate NY,40.7896,-73.4079,Light-duty van,Class 2,True,ICE (Diesel/Gas),5,76749,50.0,0.41,0.673,High,2062,7497
+NG-US-0364,"Melville, NY",Downstate NY,40.7896,-73.4079,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,76660,30.0,0.334,0.302,Low,2745,8415
+NG-US-0365,"Melville, NY",Downstate NY,40.7896,-73.4079,Bucket truck,Class 6,False,ICE (Diesel/Gas),8,76842,53.3,0.49,0.0,N/A (not EV-eligible),1334,4583
+NG-US-0366,"Melville, NY",Downstate NY,40.7896,-73.4079,Bucket truck,Class 6,False,ICE (Diesel/Gas),1,12939,6.7,0.218,0.0,N/A (not EV-eligible),1581,4773
+NG-US-0367,"Melville, NY",Downstate NY,40.7896,-73.4079,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,17158,10.0,0.099,0.185,Low,2325,6744
+NG-US-0368,"Melville, NY",Downstate NY,40.7896,-73.4079,Bucket truck,Class 6,False,ICE (Diesel/Gas),8,81913,53.3,0.602,0.0,N/A (not EV-eligible),1337,4878
+NG-US-0369,"Melville, NY",Downstate NY,40.7896,-73.4079,Light-duty van,Class 2,True,ICE (Diesel/Gas),5,87844,50.0,0.522,0.361,Medium,2122,7543
+NG-US-0370,"Melville, NY",Downstate NY,40.7896,-73.4079,Digger derrick,Class 7,False,ICE (Diesel/Gas),1,6721,5.0,0.188,0.0,N/A (not EV-eligible),977,3157
+NG-US-0371,"Melville, NY",Downstate NY,40.7896,-73.4079,Service truck,Class 4,False,ICE (Diesel/Gas),3,38517,25.0,0.245,0.0,N/A (not EV-eligible),1650,6125
+NG-US-0372,"Melville, NY",Downstate NY,40.7896,-73.4079,Bucket truck,Class 6,False,ICE (Diesel/Gas),6,80034,40.0,0.471,0.0,N/A (not EV-eligible),1540,5002
+NG-US-0373,"Melville, NY",Downstate NY,40.7896,-73.4079,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,88335,40.0,0.38,0.262,Low,2850,9696
+NG-US-0374,"Melville, NY",Downstate NY,40.7896,-73.4079,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),1,24996,12.5,0.206,0.466,Medium,3292,10977
+NG-US-0375,"Melville, NY",Downstate NY,40.7896,-73.4079,Light-duty van,Class 2,True,ICE (Diesel/Gas),7,129446,70.0,0.702,0.725,High,2356,7665
+NG-US-0376,"Melville, NY",Downstate NY,40.7896,-73.4079,Light-duty van,Class 2,True,Electric,1,16288,10.0,0.089,0.0,Already EV,0,0
+NG-US-0377,"Melville, NY",Downstate NY,40.7896,-73.4079,Digger derrick,Class 7,False,ICE (Diesel/Gas),7,58880,35.0,0.386,0.0,N/A (not EV-eligible),944,3362
+NG-US-0378,"Melville, NY",Downstate NY,40.7896,-73.4079,Light-duty van,Class 2,True,ICE (Diesel/Gas),4,75342,40.0,0.388,0.445,Medium,2032,7720
+NG-US-0379,"Melville, NY",Downstate NY,40.7896,-73.4079,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,52686,25.0,0.34,0.176,Low,3119,10565
+NG-US-0380,"Melville, NY",Downstate NY,40.7896,-73.4079,Digger derrick,Class 7,False,ICE (Diesel/Gas),1,6676,5.0,0.124,0.0,N/A (not EV-eligible),951,3302
+NG-US-0381,"Melville, NY",Downstate NY,40.7896,-73.4079,Pickup truck,Class 2,True,ICE (Diesel/Gas),6,144707,60.0,0.639,0.641,Medium,2463,9693
+NG-US-0382,"Melville, NY",Downstate NY,40.7896,-73.4079,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),5,136038,62.5,0.542,0.687,High,2861,10881
+NG-US-0383,"Melville, NY",Downstate NY,40.7896,-73.4079,Bucket truck,Class 6,False,ICE (Diesel/Gas),1,13474,6.7,0.11,0.0,N/A (not EV-eligible),1314,5054
+NG-US-0384,"Melville, NY",Downstate NY,40.7896,-73.4079,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),1,24552,12.5,0.199,0.302,Low,2921,9605
+NG-US-0385,"Melville, NY",Downstate NY,40.7896,-73.4079,Light-duty van,Class 2,True,ICE (Diesel/Gas),4,78416,40.0,0.432,0.258,Low,2317,6900
+NG-US-0386,"Melville, NY",Downstate NY,40.7896,-73.4079,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,43002,25.0,0.361,0.371,Medium,3248,10586
+NG-US-0387,"Melville, NY",Downstate NY,40.7896,-73.4079,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,42526,20.0,0.212,0.151,Low,2573,8892
+NG-US-0388,"Melville, NY",Downstate NY,40.7896,-73.4079,Service truck,Class 4,False,ICE (Diesel/Gas),2,33652,16.7,0.336,0.0,N/A (not EV-eligible),1963,5538
+NG-US-0389,"Melville, NY",Downstate NY,40.7896,-73.4079,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,56897,25.0,0.321,0.153,Low,2820,10229
+NG-US-0390,"Melville, NY",Downstate NY,40.7896,-73.4079,Pickup truck,Class 2,True,ICE (Diesel/Gas),5,108413,50.0,0.497,0.609,Medium,2479,9600
+NG-US-0391,"Melville, NY",Downstate NY,40.7896,-73.4079,Bucket truck,Class 6,False,ICE (Diesel/Gas),3,28892,20.0,0.23,0.0,N/A (not EV-eligible),1363,4699
+NG-US-0392,"Melville, NY",Downstate NY,40.7896,-73.4079,Digger derrick,Class 7,False,ICE (Diesel/Gas),14,132204,70.0,0.598,0.0,N/A (not EV-eligible),990,3458
+NG-US-0393,"Melville, NY",Downstate NY,40.7896,-73.4079,Bucket truck,Class 6,False,ICE (Diesel/Gas),1,12143,6.7,0.101,0.0,N/A (not EV-eligible),1438,4421
+NG-US-0394,"Melville, NY",Downstate NY,40.7896,-73.4079,Service truck,Class 4,False,ICE (Diesel/Gas),6,75349,50.0,0.56,0.0,N/A (not EV-eligible),1943,6084
+NG-US-0395,"Melville, NY",Downstate NY,40.7896,-73.4079,Bucket truck,Class 6,False,ICE (Diesel/Gas),4,57111,26.7,0.245,0.0,N/A (not EV-eligible),1324,4493
+NG-US-0396,"Melville, NY",Downstate NY,40.7896,-73.4079,Digger derrick,Class 7,False,ICE (Diesel/Gas),1,8217,5.0,0.127,0.0,N/A (not EV-eligible),1049,3062
+NG-US-0397,"Melville, NY",Downstate NY,40.7896,-73.4079,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,49294,20.0,0.314,0.247,Low,2520,8132
+NG-US-0398,"Melville, NY",Downstate NY,40.7896,-73.4079,Light-duty van,Class 2,True,ICE (Diesel/Gas),6,111659,60.0,0.519,0.546,Medium,2120,7324
+NG-US-0399,"Melville, NY",Downstate NY,40.7896,-73.4079,Service truck,Class 4,False,ICE (Diesel/Gas),2,27700,16.7,0.183,0.0,N/A (not EV-eligible),1663,5645
+NG-US-0400,"Melville, NY",Downstate NY,40.7896,-73.4079,Bucket truck,Class 6,False,ICE (Diesel/Gas),10,129450,66.7,0.557,0.0,N/A (not EV-eligible),1537,4681
+NG-US-0401,"Melville, NY",Downstate NY,40.7896,-73.4079,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,33923,20.0,0.292,0.224,Low,2372,6590
+NG-US-0402,"Melville, NY",Downstate NY,40.7896,-73.4079,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,72549,30.0,0.341,0.502,Medium,2450,8020
+NG-US-0403,"Melville, NY",Downstate NY,40.7896,-73.4079,Digger derrick,Class 7,False,ICE (Diesel/Gas),18,122729,90.0,0.845,0.0,N/A (not EV-eligible),935,3316
+NG-US-0404,"Melville, NY",Downstate NY,40.7896,-73.4079,Bucket truck,Class 6,False,ICE (Diesel/Gas),6,65054,40.0,0.471,0.0,N/A (not EV-eligible),1302,4426
+NG-US-0405,"Melville, NY",Downstate NY,40.7896,-73.4079,Service truck,Class 4,False,ICE (Diesel/Gas),4,51091,33.3,0.433,0.0,N/A (not EV-eligible),1919,5856
+NG-US-0406,"Melville, NY",Downstate NY,40.7896,-73.4079,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,46829,30.0,0.392,0.338,Low,1957,7538
+NG-US-0407,"Melville, NY",Downstate NY,40.7896,-73.4079,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,31495,20.0,0.329,0.134,Low,2211,6902
+NG-US-0408,"Melville, NY",Downstate NY,40.7896,-73.4079,Pickup truck,Class 2,True,Electric,3,67338,30.0,0.298,0.0,Already EV,0,0
+NG-US-0409,"Melville, NY",Downstate NY,40.7896,-73.4079,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,41539,20.0,0.295,0.441,Medium,2287,7984
+NG-US-0410,"Melville, NY",Downstate NY,40.7896,-73.4079,Digger derrick,Class 7,False,ICE (Diesel/Gas),5,40712,25.0,0.298,0.0,N/A (not EV-eligible),1039,3234
+NG-US-0411,"Worcester, MA",Massachusetts,42.2626,-71.8023,Pickup truck,Class 2,True,ICE (Diesel/Gas),1,20406,10.0,0.257,0.371,Medium,2407,9762
+NG-US-0412,"Worcester, MA",Massachusetts,42.2626,-71.8023,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),5,149980,62.5,0.557,0.638,Medium,2860,10739
+NG-US-0413,"Worcester, MA",Massachusetts,42.2626,-71.8023,Service truck,Class 4,False,ICE (Diesel/Gas),1,17978,8.3,0.116,0.0,N/A (not EV-eligible),1925,6420
+NG-US-0414,"Worcester, MA",Massachusetts,42.2626,-71.8023,Pickup truck,Class 2,True,ICE (Diesel/Gas),7,175266,70.0,0.708,0.742,High,2744,9624
+NG-US-0415,"Worcester, MA",Massachusetts,42.2626,-71.8023,Light-duty van,Class 2,True,ICE (Diesel/Gas),5,106112,50.0,0.539,0.375,Medium,2371,7827
+NG-US-0416,"Worcester, MA",Massachusetts,42.2626,-71.8023,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,49809,25.0,0.246,0.238,Low,3016,9091
+NG-US-0417,"Worcester, MA",Massachusetts,42.2626,-71.8023,Service truck,Class 4,False,ICE (Diesel/Gas),2,25566,16.7,0.269,0.0,N/A (not EV-eligible),1951,6477
+NG-US-0418,"Worcester, MA",Massachusetts,42.2626,-71.8023,Pickup truck,Class 2,True,ICE (Diesel/Gas),1,22762,10.0,0.236,0.399,Medium,2830,9707
+NG-US-0419,"Worcester, MA",Massachusetts,42.2626,-71.8023,Pickup truck,Class 2,True,ICE (Diesel/Gas),8,168650,80.0,0.69,0.535,Medium,2459,9686
+NG-US-0420,"Worcester, MA",Massachusetts,42.2626,-71.8023,Digger derrick,Class 7,False,ICE (Diesel/Gas),17,144115,85.0,0.73,0.0,N/A (not EV-eligible),1050,3357
+NG-US-0421,"Worcester, MA",Massachusetts,42.2626,-71.8023,Service truck,Class 4,False,ICE (Diesel/Gas),7,93376,58.3,0.565,0.0,N/A (not EV-eligible),1683,5826
+NG-US-0422,"Worcester, MA",Massachusetts,42.2626,-71.8023,Bucket truck,Class 6,False,ICE (Diesel/Gas),2,26197,13.3,0.3,0.0,N/A (not EV-eligible),1569,4743
+NG-US-0423,"Worcester, MA",Massachusetts,42.2626,-71.8023,Service truck,Class 4,False,ICE (Diesel/Gas),11,134137,91.7,0.802,0.0,N/A (not EV-eligible),1952,6627
+NG-US-0424,"Worcester, MA",Massachusetts,42.2626,-71.8023,Light-duty van,Class 2,True,ICE (Diesel/Gas),4,84577,40.0,0.49,0.335,Low,2368,6789
+NG-US-0425,"Worcester, MA",Massachusetts,42.2626,-71.8023,Service truck,Class 4,False,ICE (Diesel/Gas),1,16254,8.3,0.197,0.0,N/A (not EV-eligible),1939,5995
+NG-US-0426,"Worcester, MA",Massachusetts,42.2626,-71.8023,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,36393,20.0,0.171,0.121,Low,2580,9301
+NG-US-0427,"Worcester, MA",Massachusetts,42.2626,-71.8023,Service truck,Class 4,False,ICE (Diesel/Gas),9,134626,75.0,0.675,0.0,N/A (not EV-eligible),1817,5577
+NG-US-0428,"Worcester, MA",Massachusetts,42.2626,-71.8023,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),6,159058,75.0,0.646,0.479,Medium,3207,9686
+NG-US-0429,"Worcester, MA",Massachusetts,42.2626,-71.8023,Pickup truck,Class 2,True,ICE (Diesel/Gas),9,164277,90.0,0.749,0.833,High,2665,9596
+NG-US-0430,"Worcester, MA",Massachusetts,42.2626,-71.8023,Light-duty van,Class 2,True,ICE (Diesel/Gas),4,75273,40.0,0.332,0.617,Medium,2015,7839
+NG-US-0431,"Worcester, MA",Massachusetts,42.2626,-71.8023,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,15880,10.0,0.216,0.349,Low,2259,6931
+NG-US-0432,"Worcester, MA",Massachusetts,42.2626,-71.8023,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,36074,20.0,0.317,0.181,Low,2567,8759
+NG-US-0433,"Worcester, MA",Massachusetts,42.2626,-71.8023,Pickup truck,Class 2,True,ICE (Diesel/Gas),5,114409,50.0,0.411,0.368,Medium,2530,8145
+NG-US-0434,"Worcester, MA",Massachusetts,42.2626,-71.8023,Digger derrick,Class 7,False,ICE (Diesel/Gas),4,30688,20.0,0.255,0.0,N/A (not EV-eligible),991,2968
+NG-US-0435,"Worcester, MA",Massachusetts,42.2626,-71.8023,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),1,28855,12.5,0.195,0.18,Low,2979,9547
+NG-US-0436,"Worcester, MA",Massachusetts,42.2626,-71.8023,Pickup truck,Class 2,True,ICE (Diesel/Gas),1,24220,10.0,0.1,0.198,Low,2662,9725
+NG-US-0437,"Worcester, MA",Massachusetts,42.2626,-71.8023,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),3,85224,37.5,0.399,0.439,Medium,3220,10049
+NG-US-0438,"Worcester, MA",Massachusetts,42.2626,-71.8023,Service truck,Class 4,False,ICE (Diesel/Gas),4,49895,33.3,0.43,0.0,N/A (not EV-eligible),1877,6063
+NG-US-0439,"Worcester, MA",Massachusetts,42.2626,-71.8023,Service truck,Class 4,False,ICE (Diesel/Gas),7,112456,58.3,0.603,0.0,N/A (not EV-eligible),1663,6372
+NG-US-0440,"Worcester, MA",Massachusetts,42.2626,-71.8023,Light-duty van,Class 2,True,ICE (Diesel/Gas),10,213996,100.0,0.825,0.769,High,2371,7178
+NG-US-0441,"Worcester, MA",Massachusetts,42.2626,-71.8023,Service truck,Class 4,False,ICE (Diesel/Gas),5,85023,41.7,0.402,0.0,N/A (not EV-eligible),1948,6562
+NG-US-0442,"Worcester, MA",Massachusetts,42.2626,-71.8023,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,51783,30.0,0.292,0.363,Medium,2321,7689
+NG-US-0443,"Worcester, MA",Massachusetts,42.2626,-71.8023,Bucket truck,Class 6,False,ICE (Diesel/Gas),5,58070,33.3,0.346,0.0,N/A (not EV-eligible),1339,4933
+NG-US-0444,"Worcester, MA",Massachusetts,42.2626,-71.8023,Bucket truck,Class 6,False,ICE (Diesel/Gas),12,168476,80.0,0.793,0.0,N/A (not EV-eligible),1325,4641
+NG-US-0445,"Worcester, MA",Massachusetts,42.2626,-71.8023,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,48218,25.0,0.294,0.394,Medium,2722,9646
+NG-US-0446,"Worcester, MA",Massachusetts,42.2626,-71.8023,Light-duty van,Class 2,True,Electric,4,77577,40.0,0.507,0.0,Already EV,0,0
+NG-US-0447,"Worcester, MA",Massachusetts,42.2626,-71.8023,Pickup truck,Class 2,True,ICE (Diesel/Gas),2,48325,20.0,0.345,0.128,Low,2808,8538
+NG-US-0448,"Worcester, MA",Massachusetts,42.2626,-71.8023,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,94906,40.0,0.503,0.294,Low,2890,8787
+NG-US-0449,"Worcester, MA",Massachusetts,42.2626,-71.8023,Digger derrick,Class 7,False,ICE (Diesel/Gas),3,23201,15.0,0.248,0.0,N/A (not EV-eligible),900,3045
+NG-US-0450,"Worcester, MA",Massachusetts,42.2626,-71.8023,Digger derrick,Class 7,False,ICE (Diesel/Gas),11,97134,55.0,0.631,0.0,N/A (not EV-eligible),1022,3242
+NG-US-0451,"Worcester, MA",Massachusetts,42.2626,-71.8023,Light-duty van,Class 2,True,ICE (Diesel/Gas),2,36098,20.0,0.33,0.472,Medium,1957,6825
+NG-US-0452,"Worcester, MA",Massachusetts,42.2626,-71.8023,Digger derrick,Class 7,False,ICE (Diesel/Gas),13,93579,65.0,0.592,0.0,N/A (not EV-eligible),1040,3364
+NG-US-0453,"Worcester, MA",Massachusetts,42.2626,-71.8023,Pickup truck,Class 2,True,ICE (Diesel/Gas),7,154316,70.0,0.585,0.432,Medium,2573,9055
+NG-US-0454,"Worcester, MA",Massachusetts,42.2626,-71.8023,Light-duty van,Class 2,True,ICE (Diesel/Gas),7,130379,70.0,0.6,0.778,High,2268,7547
+NG-US-0455,"Worcester, MA",Massachusetts,42.2626,-71.8023,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,57101,30.0,0.421,0.523,Medium,2718,9204
+NG-US-0456,"Worcester, MA",Massachusetts,42.2626,-71.8023,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,53329,30.0,0.376,0.184,Low,2857,9150
+NG-US-0457,"Worcester, MA",Massachusetts,42.2626,-71.8023,Bucket truck,Class 6,False,ICE (Diesel/Gas),1,10811,6.7,0.212,0.0,N/A (not EV-eligible),1384,5301
+NG-US-0458,"Worcester, MA",Massachusetts,42.2626,-71.8023,Bucket truck,Class 6,False,ICE (Diesel/Gas),4,45628,26.7,0.279,0.0,N/A (not EV-eligible),1369,4816
+NG-US-0459,"Worcester, MA",Massachusetts,42.2626,-71.8023,Bucket truck,Class 6,False,ICE (Diesel/Gas),9,103557,60.0,0.493,0.0,N/A (not EV-eligible),1443,5005
+NG-US-0460,"Worcester, MA",Massachusetts,42.2626,-71.8023,Digger derrick,Class 7,False,ICE (Diesel/Gas),5,42357,25.0,0.326,0.0,N/A (not EV-eligible),921,2979
+NG-US-0461,"Waltham, MA",Massachusetts,42.3765,-71.2356,Light-duty van,Class 2,True,ICE (Diesel/Gas),10,190123,100.0,0.852,0.884,High,2330,6979
+NG-US-0462,"Waltham, MA",Massachusetts,42.3765,-71.2356,Light-duty van,Class 2,True,ICE (Diesel/Gas),6,125266,60.0,0.669,0.6,Medium,2229,7535
+NG-US-0463,"Waltham, MA",Massachusetts,42.3765,-71.2356,Bucket truck,Class 6,False,ICE (Diesel/Gas),7,100715,46.7,0.453,0.0,N/A (not EV-eligible),1417,4740
+NG-US-0464,"Waltham, MA",Massachusetts,42.3765,-71.2356,Light-duty van,Class 2,True,ICE (Diesel/Gas),5,92594,50.0,0.55,0.389,Medium,2175,7686
+NG-US-0465,"Waltham, MA",Massachusetts,42.3765,-71.2356,Service truck,Class 4,False,ICE (Diesel/Gas),6,90263,50.0,0.57,0.0,N/A (not EV-eligible),1923,6516
+NG-US-0466,"Waltham, MA",Massachusetts,42.3765,-71.2356,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,15321,10.0,0.237,0.365,Medium,2023,7533
+NG-US-0467,"Waltham, MA",Massachusetts,42.3765,-71.2356,Pickup truck,Class 2,True,ICE (Diesel/Gas),1,20726,10.0,0.14,0.375,Medium,2551,8462
+NG-US-0468,"Waltham, MA",Massachusetts,42.3765,-71.2356,Pickup truck,Class 2,True,ICE (Diesel/Gas),7,152185,70.0,0.674,0.798,High,2414,9580
+NG-US-0469,"Waltham, MA",Massachusetts,42.3765,-71.2356,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),6,142900,75.0,0.6,0.792,High,2782,9495
+NG-US-0470,"Waltham, MA",Massachusetts,42.3765,-71.2356,Pickup truck,Class 2,True,ICE (Diesel/Gas),4,102313,40.0,0.403,0.526,Medium,2787,8866
+NG-US-0471,"Waltham, MA",Massachusetts,42.3765,-71.2356,Bucket truck,Class 6,False,ICE (Diesel/Gas),2,25291,13.3,0.11,0.0,N/A (not EV-eligible),1375,5101
+NG-US-0472,"Waltham, MA",Massachusetts,42.3765,-71.2356,Light-duty van,Class 2,True,ICE (Diesel/Gas),6,107550,60.0,0.497,0.606,Medium,2218,7131
+NG-US-0473,"Waltham, MA",Massachusetts,42.3765,-71.2356,Service truck,Class 4,False,ICE (Diesel/Gas),3,36679,25.0,0.226,0.0,N/A (not EV-eligible),1754,5471
+NG-US-0474,"Waltham, MA",Massachusetts,42.3765,-71.2356,Pickup truck,Class 2,True,ICE (Diesel/Gas),7,134940,70.0,0.659,0.52,Medium,2742,8611
+NG-US-0475,"Waltham, MA",Massachusetts,42.3765,-71.2356,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,55915,30.0,0.408,0.299,Low,2070,7603
+NG-US-0476,"Waltham, MA",Massachusetts,42.3765,-71.2356,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),2,57759,25.0,0.28,0.511,Medium,2916,9471
+NG-US-0477,"Waltham, MA",Massachusetts,42.3765,-71.2356,Service truck,Class 4,False,ICE (Diesel/Gas),9,129783,75.0,0.637,0.0,N/A (not EV-eligible),1882,5613
+NG-US-0478,"Waltham, MA",Massachusetts,42.3765,-71.2356,Bucket truck,Class 6,False,ICE (Diesel/Gas),6,62467,40.0,0.377,0.0,N/A (not EV-eligible),1483,4399
+NG-US-0479,"Waltham, MA",Massachusetts,42.3765,-71.2356,Digger derrick,Class 7,False,ICE (Diesel/Gas),3,24333,15.0,0.13,0.0,N/A (not EV-eligible),1055,3337
+NG-US-0480,"Waltham, MA",Massachusetts,42.3765,-71.2356,Bucket truck,Class 6,False,ICE (Diesel/Gas),1,12911,6.7,0.138,0.0,N/A (not EV-eligible),1406,4894
+NG-US-0481,"Waltham, MA",Massachusetts,42.3765,-71.2356,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),1,26952,12.5,0.163,0.34,Low,3097,9635
+NG-US-0482,"Waltham, MA",Massachusetts,42.3765,-71.2356,Bucket truck,Class 6,False,ICE (Diesel/Gas),2,27174,13.3,0.133,0.0,N/A (not EV-eligible),1503,4477
+NG-US-0483,"Waltham, MA",Massachusetts,42.3765,-71.2356,Light-duty van,Class 2,True,ICE (Diesel/Gas),1,15830,10.0,0.129,0.269,Low,2031,7568
+NG-US-0484,"Waltham, MA",Massachusetts,42.3765,-71.2356,Pickup truck,Class 2,True,ICE (Diesel/Gas),1,21968,10.0,0.267,0.192,Low,2377,9193
+NG-US-0485,"Waltham, MA",Massachusetts,42.3765,-71.2356,Service truck,Class 4,False,ICE (Diesel/Gas),8,128113,66.7,0.577,0.0,N/A (not EV-eligible),1652,6074
+NG-US-0486,"Waltham, MA",Massachusetts,42.3765,-71.2356,Bucket truck,Class 6,False,ICE (Diesel/Gas),1,10828,6.7,0.098,0.0,N/A (not EV-eligible),1581,4650
+NG-US-0487,"Waltham, MA",Massachusetts,42.3765,-71.2356,SUV/response vehicle,Class 1,True,Electric,1,21747,12.5,0.153,0.0,Already EV,0,0
+NG-US-0488,"Waltham, MA",Massachusetts,42.3765,-71.2356,Digger derrick,Class 7,False,ICE (Diesel/Gas),4,35053,20.0,0.185,0.0,N/A (not EV-eligible),1010,2938
+NG-US-0489,"Waltham, MA",Massachusetts,42.3765,-71.2356,Digger derrick,Class 7,False,ICE (Diesel/Gas),9,62511,45.0,0.414,0.0,N/A (not EV-eligible),948,3311
+NG-US-0490,"Waltham, MA",Massachusetts,42.3765,-71.2356,Digger derrick,Class 7,False,ICE (Diesel/Gas),1,9008,5.0,0.078,0.0,N/A (not EV-eligible),941,3531
+NG-US-0491,"Waltham, MA",Massachusetts,42.3765,-71.2356,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,75258,30.0,0.382,0.499,Medium,2436,9237
+NG-US-0492,"Waltham, MA",Massachusetts,42.3765,-71.2356,Light-duty van,Class 2,True,ICE (Diesel/Gas),8,124381,80.0,0.725,0.801,High,2237,6808
+NG-US-0493,"Waltham, MA",Massachusetts,42.3765,-71.2356,Pickup truck,Class 2,True,ICE (Diesel/Gas),3,53561,30.0,0.391,0.569,Medium,2445,9635
+NG-US-0494,"Waltham, MA",Massachusetts,42.3765,-71.2356,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,44193,30.0,0.287,0.462,Medium,2237,7661
+NG-US-0495,"Waltham, MA",Massachusetts,42.3765,-71.2356,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),3,89337,37.5,0.389,0.434,Medium,3120,9282
+NG-US-0496,"Waltham, MA",Massachusetts,42.3765,-71.2356,Bucket truck,Class 6,False,ICE (Diesel/Gas),3,33779,20.0,0.292,0.0,N/A (not EV-eligible),1407,5177
+NG-US-0497,"Waltham, MA",Massachusetts,42.3765,-71.2356,SUV/response vehicle,Class 1,True,ICE (Diesel/Gas),8,164365,100.0,0.778,0.94,High,3211,10846
+NG-US-0498,"Waltham, MA",Massachusetts,42.3765,-71.2356,Light-duty van,Class 2,True,ICE (Diesel/Gas),4,64538,40.0,0.318,0.329,Low,2222,7131
+NG-US-0499,"Waltham, MA",Massachusetts,42.3765,-71.2356,Light-duty van,Class 2,True,ICE (Diesel/Gas),3,60507,30.0,0.422,0.359,Medium,1995,7268
+NG-US-0500,"Waltham, MA",Massachusetts,42.3765,-71.2356,Bucket truck,Class 6,False,ICE (Diesel/Gas),1,11579,6.7,0.164,0.0,N/A (not EV-eligible),1296,4451
